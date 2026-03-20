@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.venv/
+venv/
+
+# Django
+/staticfiles/
+/media/
+
+# Environment
+.env
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Data / database dumps
+/data/
+*.sql
+*.dump
+*.bak
+
+# Postgres local volume export (never commit DB)
+postgres_data/

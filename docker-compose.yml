@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: enron_discovery_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: enron_discovery
+      POSTGRES_USER: enron_user
+      POSTGRES_PASSWORD: enron_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
