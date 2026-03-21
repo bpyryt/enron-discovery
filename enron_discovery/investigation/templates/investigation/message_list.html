@@ -7,30 +7,60 @@
 <body>
     <h1>Messages</h1>
 
-    <form method="get" style="margin-bottom: 20px;">
-        <input
-            type="text"
-            name="q"
-            value="{{ q }}"
-            placeholder="Rechercher par sujet, contenu ou expéditeur"
-            style="width: 320px;"
-        >
-        <button type="submit">Rechercher</button>
+    <form method="get" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: end;">
+        <div>
+            <label for="q">Recherche</label><br>
+            <input
+                id="q"
+                type="text"
+                name="q"
+                value="{{ q }}"
+                placeholder="Sujet, contenu, expéditeur"
+                style="width: 280px;"
+            >
+        </div>
 
-        {% if q %}
+        <div>
+            <label for="sender">Expéditeur</label><br>
+            <input
+                id="sender"
+                type="text"
+                name="sender"
+                list="sender-emails"
+                value="{{ sender }}"
+                placeholder="Tape un email expéditeur"
+                style="width: 280px;"
+            >
+            <datalist id="sender-emails">
+                {% for sender_obj in senders %}
+                    <option value="{{ sender_obj.email }}">
+                {% endfor %}
+            </datalist>
+        </div>
+
+        <div>
+            <label for="date_from">Date min</label><br>
+            <input id="date_from" type="date" name="date_from" value="{{ date_from }}">
+        </div>
+
+        <div>
+            <label for="date_to">Date max</label><br>
+            <input id="date_to" type="date" name="date_to" value="{{ date_to }}">
+        </div>
+
+        <div>
+            <button type="submit">Filtrer</button>
             <a href="{% url 'message_list' %}" style="margin-left: 10px;">Réinitialiser</a>
-        {% endif %}
+        </div>
     </form>
 
-    {% if q %}
+    {% if q or sender or date_from or date_to %}
         <p>
-            Résultats pour <strong>"{{ q }}"</strong> :
-            {{ result_count }} message{{ result_count|pluralize }}
+            {{ result_count }} message{{ result_count|pluralize }} trouvé{{ result_count|pluralize }}
+            avec les filtres actuels.
         </p>
     {% else %}
-        <p>
-            {{ result_count }} message{{ result_count|pluralize }} au total
-        </p>
+        <p>{{ result_count }} message{{ result_count|pluralize }} au total.</p>
     {% endif %}
 
     <hr>
