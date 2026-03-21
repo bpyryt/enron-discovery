@@ -1,0 +1,63 @@
+{% extends "investigation/base.html" %}
+
+{% block title %}Détail conversation - Enron Discovery{% endblock %}
+
+{% block content %}
+<div class="card">
+    <p>
+        <a class="btn btn-secondary" href="{% url 'conversation_list' %}">← Retour aux conversations</a>
+    </p>
+
+    <h2>Conversation probable</h2>
+
+    <p>
+        <strong>Sujet demandé :</strong>
+        {% if requested_subject %}
+            {{ requested_subject }}
+        {% else %}
+            -
+        {% endif %}
+        <br>
+        <strong>Sujet normalisé :</strong>
+        {% if normalized_subject %}
+            {{ normalized_subject }}
+        {% else %}
+            -
+        {% endif %}
+    </p>
+</div>
+
+<div class="card">
+    {% if conversation_messages %}
+        <p class="muted">
+            Messages triés par ordre chronologique croissant.
+        </p>
+
+        <ul>
+            {% for message in conversation_messages %}
+                <li style="margin-bottom: 14px;">
+                    <a href="{% url 'message_detail' message.id %}">
+                        {{ message.subject|default:"(Sans objet)" }}
+                    </a>
+                    <br>
+                    <span class="muted">
+                        {% if message.sent_at %}
+                            {{ message.sent_at|date:"d/m/Y H:i" }}
+                        {% else %}
+                            Date inconnue
+                        {% endif %}
+                        —
+                        {% if message.sender %}
+                            {{ message.sender }}
+                        {% else %}
+                            Inconnu
+                        {% endif %}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun message trouvé pour cette conversation.</p>
+    {% endif %}
+</div>
+{% endblock %}

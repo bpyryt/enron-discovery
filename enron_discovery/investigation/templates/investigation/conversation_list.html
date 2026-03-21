@@ -1,0 +1,44 @@
+{% extends "investigation/base.html" %}
+
+{% block title %}Conversations - Enron Discovery{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Conversations probables</h2>
+    <p class="muted">
+        Regroupement des messages par sujet normalisé (suppression de Re:, Fw:, Fwd:), avec uniquement les sujets présents plusieurs fois.
+    </p>
+    <p>
+        <strong>{{ conversation_count }}</strong> conversation{{ conversation_count|pluralize }} trouvée{{ conversation_count|pluralize }}.
+    </p>
+</div>
+
+<div class="card">
+    {% if conversations %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Sujet normalisé</th>
+                    <th>Nombre de messages</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conversation in conversations %}
+                    <tr>
+                        <td>{{ conversation.subject }}</td>
+                        <td>{{ conversation.count }}</td>
+                        <td>
+                            <a class="btn" href="{% url 'conversation_detail' %}?subject={{ conversation.subject|urlencode }}">
+                                Voir la conversation
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucune conversation probable trouvée.</p>
+    {% endif %}
+</div>
+{% endblock %}

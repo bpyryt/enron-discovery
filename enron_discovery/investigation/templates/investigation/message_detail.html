@@ -33,6 +33,7 @@
     <p><strong>Message-ID :</strong> {{ message.message_id_header|default:"-" }}</p>
     <p><strong>In-Reply-To :</strong> {{ message.in_reply_to_header|default:"-" }}</p>
     <p><strong>Chemin brut :</strong> {{ message.raw_path|default:"-" }}</p>
+    <p><strong>Sujet normalisé :</strong> {{ normalized_subject|default:"-" }}</p>
 </div>
 
 <div class="card">
@@ -52,7 +53,7 @@
 </div>
 
 <div class="card">
-    <h3>Réponses associées</h3>
+    <h3>Réponses associées via headers</h3>
     <ul>
         {% for reply in message.replies.all %}
             <li>
@@ -64,8 +65,52 @@
                 {% endif %}
             </li>
         {% empty %}
-            <li>Aucune réponse liée.</li>
+            <li>Aucune réponse liée via In-Reply-To.</li>
         {% endfor %}
     </ul>
+</div>
+
+<div class="card">
+    <h3>Conversation probable (ordre chronologique)</h3>
+
+    {% if conversation_messages %}
+        <p class="muted">
+            Messages regroupés par sujet normalisé identique, triés par date croissante.
+        </p>
+
+        <ul>
+            {% for conversation_message in conversation_messages %}
+                <li style="margin-bottom: 10px;">
+                    {% if conversation_message.id == message.id %}
+                        <strong>
+                            {{ conversation_message.subject|default:"(Sans objet)" }}
+                        </strong>
+                    {% else %}
+                        <a href="{% url 'message_detail' conversation_message.id %}">
+                            {{ conversation_message.subject|default:"(Sans objet)" }}
+                        </a>
+                    {% endif %}
+
+                    <br>
+
+                    <span class="muted">
+                        {% if conversation_message.sent_at %}
+                            {{ conversation_message.sent_at|date:"d/m/Y H:i" }}
+                        {% else %}
+                            Date inconnue
+                        {% endif %}
+                        —
+                        {% if conversation_message.sender %}
+                            {{ conversation_message.sender }}
+                        {% else %}
+                            Inconnu
+                        {% endif %}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune conversation probable trouvée.</p>
+    {% endif %}
 </div>
 {% endblock %}

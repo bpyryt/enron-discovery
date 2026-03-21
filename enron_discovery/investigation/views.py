@@ -1,9 +1,29 @@
+import re
+from collections import Counter
+
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 from django.db.models import Count
 from django.db.models.functions import TruncMonth
 from django.shortcuts import get_object_or_404, render
 
 from .models import Employee, Message
+
+
+SUBJECT_PREFIX_RE = re.compile(r"^\s*((re|fw|fwd)\s*:\s*)+", re.IGNORECASE)
+
+
+def normalize_subject(subject):
+    if not subject:
+        return ""
+
+    normalized = subject.strip()
+
+    previous = None
+    while previous != normalized:
+        previous = normalized
+        normalized = SUBJECT_PREFIX_RE.sub("", normalized).strip()
+
+    return normalized.lower()
 
 
 def home(request):
@@ -70,10 +90,82 @@ def message_detail(request, pk):
         pk=pk,
     )
 
+    normalized_subject = normalize_subject(message.subject)
+
+    conversation_messages = []
+    if normalized_subject:
+        candidate_messages = (
+            Message.objects.select_related("sender")
+            .filter(subject__isnull=False)
+            .exclude(subject="")
+            .order_by("sent_at", "id")
+        )
+
+        conversation_messages = [
+            candidate
+            for candidate in candidate_messages
+            if normalize_subject(candidate.subject) == normalized_subject
+        ]
+
     context = {
         "message": message,
+        "normalized_subject": normalized_subject,
+        "conversation_messages": conversation_messages,
     }
     return render(request, "investigation/message_detail.html", context)
+
+
+def conversation_list(request):
+    messages = Message.objects.exclude(subject__isnull=True).exclude(subject="")
+
+    normalized_subjects = []
+    for message in messages:
+        normalized = normalize_subject(message.subject)
+        if normalized:
+            normalized_subjects.append(normalized)
+
+    counts = Counter(normalized_subjects)
+
+    conversations = [
+        {"subject": subject, "count": count}
+        for subject, count in counts.items()
+        if count > 1
+    ]
+    conversations.sort(key=lambda item: (-item["count"], item["subject"]))
+
+    context = {
+        "conversations": conversations,
+        "conversation_count": len(conversations),
+    }
+    return render(request, "investigation/conversation_list.html", context)
+
+
+def conversation_detail(request):
+    subject = request.GET.get("subject", "").strip()
+    normalized_subject = normalize_subject(subject)
+
+    conversation_messages = []
+
+    if normalized_subject:
+        candidate_messages = (
+            Message.objects.select_related("sender")
+            .filter(subject__isnull=False)
+            .exclude(subject="")
+            .order_by("sent_at", "id")
+        )
+
+        conversation_messages = [
+            candidate
+            for candidate in candidate_messages
+            if normalize_subject(candidate.subject) == normalized_subject
+        ]
+
+    context = {
+        "requested_subject": subject,
+        "normalized_subject": normalized_subject,
+        "conversation_messages": conversation_messages,
+    }
+    return render(request, "investigation/conversation_detail.html", context)
 
 
 def dashboard(request):
