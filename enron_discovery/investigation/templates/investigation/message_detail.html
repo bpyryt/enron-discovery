@@ -2,137 +2,79 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Détail du message</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background: #f7f7f7;
-        }
-
-        .container {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .subject {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .meta {
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .section-title {
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .body {
-            white-space: pre-wrap;
-            background: #fafafa;
-            border: 1px solid #eee;
-            padding: 1rem;
-            border-radius: 6px;
-        }
-
-        ul {
-            margin-top: 0.5rem;
-        }
-    </style>
+    <title>Détail du message - Enron Discovery</title>
 </head>
 <body>
-    <a class="back-link" href="{% url 'message_list' %}">← Retour à la liste des messages</a>
+    <p>
+        <a href="{% url 'message_list' %}">← Retour à la liste</a>
+    </p>
 
-    <div class="container">
-        <div class="subject">
-            {{ message.subject|default:"(sans sujet)" }}
-        </div>
+    <h1>{{ message.subject|default:"(Sans objet)" }}</h1>
 
-        <div class="meta">
-            <div><strong>ID :</strong> {{ message.id }}</div>
+    <p><strong>ID :</strong> {{ message.id }}</p>
 
-            <div>
-                <strong>Expéditeur :</strong>
-                {% if message.sender %}
-                    {{ message.sender.email }}
-                {% else %}
-                    (inconnu)
-                {% endif %}
-            </div>
+    <p>
+        <strong>Expéditeur :</strong>
+        {% if message.sender %}
+            {{ message.sender }}
+        {% else %}
+            Inconnu
+        {% endif %}
+    </p>
 
-            <div>
-                <strong>Date :</strong>
-                {% if message.sent_at %}
-                    {{ message.sent_at }}
-                {% else %}
-                    (inconnue)
-                {% endif %}
-            </div>
+    <p>
+        <strong>Date :</strong>
+        {% if message.sent_at %}
+            {{ message.sent_at|date:"d/m/Y H:i" }}
+        {% else %}
+            Non renseignée
+        {% endif %}
+    </p>
 
-            {% if message.message_id_header %}
-                <div><strong>Message-ID :</strong> {{ message.message_id_header }}</div>
-            {% endif %}
+    <p><strong>Message-ID :</strong> {{ message.message_id_header|default:"-" }}</p>
+    <p><strong>In-Reply-To :</strong> {{ message.in_reply_to_header|default:"-" }}</p>
+    <p><strong>Chemin brut :</strong> {{ message.raw_path|default:"-" }}</p>
 
-            {% if message.in_reply_to_header %}
-                <div><strong>In-Reply-To :</strong> {{ message.in_reply_to_header }}</div>
-            {% endif %}
-
-            {% if message.raw_path %}
-                <div><strong>Fichier source :</strong> {{ message.raw_path }}</div>
-            {% endif %}
-        </div>
-
-        <div class="section-title">Destinataires</div>
-
+    <h2>Destinataires</h2>
+    {% if message.recipients.all %}
         <ul>
             {% for recipient in message.recipients.all %}
-                <li>
-                    <strong>{{ recipient.recipient_type|upper }}</strong> :
-                    {{ recipient.employee.email }}
-                </li>
+                <li>{{ recipient }}</li>
             {% empty %}
-                <li>Aucun destinataire enregistré.</li>
+                <li>Aucun destinataire</li>
             {% endfor %}
         </ul>
+    {% else %}
+        <p>Aucun destinataire</p>
+    {% endif %}
 
-        <div class="section-title">Réponses associées</div>
+    <h2>Corps du message</h2>
+    <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 12px;">
+        {% if message.body_text %}
+            {{ message.body_text }}
+        {% else %}
+            Aucun contenu
+        {% endif %}
+    </div>
 
+    <h2>Réponses associées</h2>
+    {% if message.replies.all %}
         <ul>
             {% for reply in message.replies.all %}
-                <li style="margin-bottom: 10px;">
+                <li>
                     <a href="{% url 'message_detail' reply.id %}">
-                        {{ reply.subject|default:"(sans sujet)" }}
+                        {{ reply.subject|default:"(Sans objet)" }}
                     </a>
-                    <br>
-                    <small>
-                        ID : {{ reply.id }}
-                        {% if reply.sender %} | Expéditeur : {{ reply.sender.email }}{% endif %}
-                        {% if reply.sent_at %} | Date : {{ reply.sent_at }}{% endif %}
-                    </small>
+                    {% if reply.sent_at %}
+                        — {{ reply.sent_at|date:"d/m/Y H:i" }}
+                    {% endif %}
                 </li>
             {% empty %}
-                <li>Aucune réponse associée.</li>
+                <li>Aucune réponse liée</li>
             {% endfor %}
         </ul>
-
-        <div class="section-title">Contenu du message</div>
-
-        <div class="body">
-            {{ message.body_text|default:"(pas de contenu texte)" }}
-        </div>
-    </div>
+    {% else %}
+        <p>Aucune réponse liée.</p>
+    {% endif %}
 </body>
 </html>

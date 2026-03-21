@@ -2,116 +2,77 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Liste des messages</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background: #f7f7f7;
-        }
-
-        h1 {
-            margin-bottom: 1rem;
-        }
-
-        form {
-            margin-bottom: 1.5rem;
-            background: white;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        input[type="text"] {
-            width: 320px;
-            padding: 0.5rem;
-            font-size: 1rem;
-        }
-
-        button {
-            padding: 0.55rem 0.9rem;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .message {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-        }
-
-        .subject {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .subject a {
-            color: #111;
-            text-decoration: none;
-        }
-
-        .subject a:hover {
-            text-decoration: underline;
-        }
-
-        .meta {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .body {
-            white-space: pre-wrap;
-            color: #222;
-        }
-    </style>
+    <title>Messages - Enron Discovery</title>
 </head>
 <body>
-    <h1>Liste des messages</h1>
+    <h1>Messages</h1>
 
-    <form method="get">
+    <form method="get" style="margin-bottom: 20px;">
         <input
             type="text"
             name="q"
-            value="{{ query }}"
+            value="{{ q }}"
             placeholder="Rechercher par sujet, contenu ou expéditeur"
+            style="width: 320px;"
         >
         <button type="submit">Rechercher</button>
+
+        {% if q %}
+            <a href="{% url 'message_list' %}" style="margin-left: 10px;">Réinitialiser</a>
+        {% endif %}
     </form>
 
-    {% if query %}
-        <p>Résultats pour : <strong>{{ query }}</strong></p>
+    {% if q %}
+        <p>
+            Résultats pour <strong>"{{ q }}"</strong> :
+            {{ result_count }} message{{ result_count|pluralize }}
+        </p>
+    {% else %}
+        <p>
+            {{ result_count }} message{{ result_count|pluralize }} au total
+        </p>
     {% endif %}
 
-    <p>{{ messages|length }} message(s) affiché(s)</p>
+    <hr>
 
-    {% for message in messages %}
-        <div class="message">
-            <div class="subject">
-                <a href="{% url 'message_detail' message.id %}">
-                    {{ message.subject|default:"(sans sujet)" }}
-                </a>
-            </div>
+    {% if messages %}
+        {% for message in messages %}
+            <div style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #ccc;">
+                <h3 style="margin-bottom: 8px;">
+                    <a href="{% url 'message_detail' message.id %}">
+                        {{ message.subject|default:"(Sans objet)" }}
+                    </a>
+                </h3>
 
-            <div class="meta">
-                ID : {{ message.id }}
-                {% if message.sender %}
-                    | Expéditeur : {{ message.sender.email }}
-                {% endif %}
-                {% if message.sent_at %}
-                    | Date : {{ message.sent_at }}
-                {% endif %}
-            </div>
+                <p style="margin: 0 0 8px 0;">
+                    <strong>Expéditeur :</strong>
+                    {% if message.sender %}
+                        {{ message.sender }}
+                    {% else %}
+                        Inconnu
+                    {% endif %}
+                    <br>
+                    <strong>Date :</strong>
+                    {% if message.sent_at %}
+                        {{ message.sent_at|date:"d/m/Y H:i" }}
+                    {% else %}
+                        Non renseignée
+                    {% endif %}
+                </p>
 
-            <div class="body">
-                {{ message.body_text|default:"(pas de contenu texte)"|truncatechars:400 }}
+                <p style="margin: 0;">
+                    {% if message.body_clean %}
+                        {{ message.body_clean|truncatechars:220 }}
+                    {% elif message.body_text %}
+                        {{ message.body_text|truncatechars:220 }}
+                    {% else %}
+                        <em>Aucun contenu</em>
+                    {% endif %}
+                </p>
             </div>
-        </div>
-    {% empty %}
+        {% endfor %}
+    {% else %}
         <p>Aucun message trouvé.</p>
-    {% endfor %}
+    {% endif %}
 </body>
 </html>
