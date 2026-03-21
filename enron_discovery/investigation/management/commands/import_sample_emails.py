@@ -76,7 +76,7 @@ def to_windows_path(path):
     path_str = str(path)
 
     if os.name == "nt":
-        path_str = os.path.abspath(path_str)
+        path_str = path_str.replace("/", "\\")
         if not path_str.startswith("\\\\?\\"):
             path_str = "\\\\?\\" + path_str
 
@@ -107,7 +107,7 @@ class Command(BaseCommand):
         all_files = []
         for root, dirs, files in os.walk(folder):
             for filename in files:
-                all_files.append(Path(root) / filename)
+                all_files.append(os.path.join(root, filename))
 
         eml_files = all_files[:limit]
 
@@ -160,7 +160,7 @@ class Command(BaseCommand):
                         "sent_at": sent_at,
                         "sender": sender,
                         "in_reply_to_header": in_reply_to_header or None,
-                        "raw_path": str(file_path),
+                        "raw_path": file_path,
                     },
                 )
 
