@@ -1,3 +1,5 @@
+from django.contrib.postgres.indexes import GinIndex
+from django.contrib.postgres.search import SearchVector
 from django.db import models
 
 
@@ -35,6 +37,16 @@ class Message(models.Model):
     )
 
     raw_path = models.TextField(blank=True, null=True)
+
+    class Meta:
+        indexes = [
+            GinIndex(
+                SearchVector("subject", weight="A", config="english")
+                + SearchVector("body_clean", weight="B", config="english")
+                + SearchVector("body_text", weight="C", config="english"),
+                name="message_fts_gin_idx",
+            ),
+        ]
 
     def __str__(self):
         return self.subject or f"Message {self.id}"
