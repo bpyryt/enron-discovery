@@ -1,4 +1,4 @@
-from django.db.models import Q
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 from django.shortcuts import get_object_or_404, render
 
 from .models import Employee, Message
@@ -10,18 +10,20 @@ def message_list(request):
     date_from = request.GET.get("date_from", "").strip()
     date_to = request.GET.get("date_to", "").strip()
 
-    messages = (
-        Message.objects
-        .select_related("sender")
-        .order_by("-sent_at", "-id")
-    )
+    messages = Message.objects.select_related("sender")
 
     if q:
-        messages = messages.filter(
-            Q(subject__icontains=q) |
-            Q(body_text__icontains=q) |
-            Q(body_clean__icontains=q) |
-            Q(sender__email__icontains=q)
+        search_vector = (
+            SearchVector("subject", weight="A") +
+            SearchVector("body_clean", weight="B") +
+            SearchVector("body_text", weight="C")
+        )
+        search_query = SearchQuery(q)
+
+        messages = (
+            messages
+            .annotate(rank=SearchRank(search_vector, search_query))
+            .filter(rank__gt=0)
         )
 
     if sender:
@@ -32,6 +34,11 @@ def message_list(request):
 
     if date_to:
         messages = messages.filter(sent_at__date__lte=date_to)
+
+    if q:
+        messages = messages.order_by("-rank", "-sent_at", "-id")
+    else:
+        messages = messages.order_by("-sent_at", "-id")
 
     senders = Employee.objects.order_by("email")
     result_count = messages.count()
