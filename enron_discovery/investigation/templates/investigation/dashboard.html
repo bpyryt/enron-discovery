@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Enron Discovery</title>
+</head>
+<body>
+    <h1>Dashboard Enron Discovery</h1>
+
+    <p>
+        <a href="{% url 'message_list' %}">Voir les messages</a>
+    </p>
+
+    <h2>Statistiques globales</h2>
+    <ul>
+        <li><strong>Nombre total de messages :</strong> {{ total_messages }}</li>
+        <li><strong>Nombre total d'expéditeurs :</strong> {{ total_senders }}</li>
+    </ul>
+
+    <h2>Volume de mails par mois</h2>
+    {% if messages_by_month %}
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Mois</th>
+                    <th>Nombre de messages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in messages_by_month %}
+                    <tr>
+                        <td>
+                            {% if row.month %}
+                                {{ row.month|date:"m/Y" }}
+                            {% else %}
+                                -
+                            {% endif %}
+                        </td>
+                        <td>{{ row.total }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucune donnée disponible.</p>
+    {% endif %}
+
+    <h2>Top 10 des expéditeurs les plus actifs</h2>
+    {% if top_senders %}
+        <table border="1" cellpadding="6" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Expéditeur</th>
+                    <th>Nombre de messages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sender in top_senders %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ sender.email }}</td>
+                        <td>{{ sender.message_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucun expéditeur trouvé.</p>
+    {% endif %}
+</body>
+</html>
