@@ -1,0 +1,1402 @@
+=== APERÇU DES CANDIDATS ===
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\zufferli-j\sent_items\262.
+FROM: john.zufferli@enron.com
+SUBJECT: RE:
+MESSAGE-ID: <25642360.1075842034069.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\3819.
+FROM: leslie.hansen@enron.com
+SUBJECT: Re: EOL Credit Responses 09/13/00
+MESSAGE-ID: <20763762.1075847005658.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lenhart-m\sent\1571.
+FROM: matthew.lenhart@enron.com
+SUBJECT: Re: Commissioner.COM Transaction Request
+MESSAGE-ID: <5480426.1075858150323.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\arnold-j\all_documents\393.
+FROM: john.arnold@enron.com
+SUBJECT: Re: PAB Deleted
+MESSAGE-ID: <25397886.1075857575951.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\parks-j\deleted_items\5.
+FROM: chet_fenner@bmc.com
+SUBJECT: RE: YOU CAN THANK ME LATER
+MESSAGE-ID: <27703588.1075841354510.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shackleton-s\all_documents\325.
+FROM: mark.elliott@enron.com
+SUBJECT: Re: Papeis Inapa - deemed ISDA confo; final version
+MESSAGE-ID: <783417.1075844316989.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shackleton-s\hickerson\9.
+FROM: ted.murphy@enron.com
+SUBJECT: Re: Additional "Authorized Trader" for equity account
+MESSAGE-ID: <126527.1075844460681.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\whalley-g\discussion_threads\55.
+FROM: enron.announcements@enron.com
+SUBJECT: Enron In Action 12.04.00
+MESSAGE-ID: <26790325.1075845456608.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\all_documents\2511.
+FROM: mark.taylor@enron.com
+SUBJECT: Re: Time Stamp on Stock Quotes
+MESSAGE-ID: <8880837.1075859938234.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\notes_inbox\1912.
+FROM: brent.hendry@enron.com
+SUBJECT: Re: Brazil Financial Swap
+MESSAGE-ID: <14003380.1075860036859.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rogers-b\all_documents\293.
+FROM: benjamin.rogers@enron.com
+SUBJECT: Re: Congratulations!
+MESSAGE-ID: <16092095.1075857131263.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\notes_inbox\3807.
+FROM: frank.sayre@enron.com
+SUBJECT: Re: Credit Sleeve - TMG Financial Products Inc.
+MESSAGE-ID: <32455659.1075847421197.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\sent\1815.
+FROM: chris.germany@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <32675364.1075853898338.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\_sent_mail\3248.
+FROM: kay.mann@enron.com
+SUBJECT: Re: Option Agreement and Easement
+MESSAGE-ID: <5305875.1075846108117.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\beck-s\discussion_threads\1954.
+FROM: shona.wilson@enron.com
+SUBJECT: Global standards
+MESSAGE-ID: <868820.1075855855602.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\maggi-m\deleted_items\291.
+FROM: mike.maggi@enron.com
+SUBJECT: RE:
+MESSAGE-ID: <5188884.1075841097587.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\bass-e\sent\922.
+FROM: eric.bass@enron.com
+SUBJECT: Re: Rodeo tickets
+MESSAGE-ID: <17880513.1075854706473.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\all_documents\2723.
+FROM: mark.taylor@enron.com
+SUBJECT: Re: Workload Responsibiities in Argentina
+MESSAGE-ID: <24178424.1075859943366.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\symes-k\discussion_threads\682.
+FROM: kate.symes@enron.com
+SUBJECT: Re: LADWPPX
+MESSAGE-ID: <16795254.1075841778986.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\all_documents\8853.
+FROM: steven.kean@enron.com
+SUBJECT: Re: FW: Follow up -- Council of Energy Advisors
+MESSAGE-ID: <4304392.1075849870304.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hyvl-d\all_documents\688.
+FROM: cwpfister@cps-satx.com
+SUBJECT: RE: FW: Enfolio Contract with CPS
+MESSAGE-ID: <2274345.1075842227951.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\giron-d\deleted_items\186.
+FROM: jackson.logan@enron.com
+SUBJECT: RE: Colorado
+MESSAGE-ID: <19842685.1075852221435.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\all_documents\2545.
+FROM: daren.farmer@enron.com
+SUBJECT: Re: 98-6892 Overflow
+MESSAGE-ID: <24709576.1075854026730.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\arnold-j\sent_items\96.
+FROM: john.arnold@enron.com
+SUBJECT: Re: please fill in--i lost the scrap of paper
+MESSAGE-ID: <31893913.1075852712495.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\sent\67.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: Comments on Wholesale Issues
+MESSAGE-ID: <8559294.1075843185826.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\_sent_mail\2323.
+FROM: vince.kaminski@enron.com
+SUBJECT: Re: Friday
+MESSAGE-ID: <25385847.1075856558462.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\sager-e\sent_items\87.
+FROM: elizabeth.sager@enron.com
+SUBJECT: RE: Wednesday AM
+MESSAGE-ID: <4326171.1075852281780.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\9325.
+FROM: tana.jones@enron.com
+SUBJECT: Re: Arbitration Language
+MESSAGE-ID: <20348081.1075847300447.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\sent\1015.
+FROM: mark.taylor@enron.com
+SUBJECT: Re: Bandwidth Products On EnronOnline. (Revised)
+MESSAGE-ID: <1238372.1075860071999.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\allen-p\_sent_mail\387.
+FROM: phillip.allen@enron.com
+SUBJECT: Re: Resume
+MESSAGE-ID: <22637883.1075855724534.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\williams-w3\sent_items\50.
+FROM: bill.williams@enron.com
+SUBJECT: RE: Additional Payment
+MESSAGE-ID: <1825624.1075839992587.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\richey-c\inbox\43.
+FROM: jilld@cnrl.com
+SUBJECT: RE: Friday Festivities
+MESSAGE-ID: <5587389.1075841469627.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\ring-r\personalfolder\41.
+FROM: nick.politis@enron.com
+SUBJECT: RE: Unforced capacity credits
+MESSAGE-ID: <25754367.1075858665136.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\cash-m\inbox\19.
+FROM: mike.indivero@nepco.com
+SUBJECT: RE: lake worth project
+MESSAGE-ID: <1001303.1075853131482.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lavorato-j\sent\540.
+FROM: john.lavorato@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <16736422.1075845562603.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\sent\796.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: Conf Call Follow Up
+MESSAGE-ID: <5687628.1075843202943.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shackleton-s\all_documents\728.
+FROM: sara.shackleton@enron.com
+SUBJECT: Re: Aquilla Muni Deal
+MESSAGE-ID: <5271555.1075844326924.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\sent\762.
+FROM: susan.scott@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <30290478.1075846806118.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lavorato-j\discussion_threads\193.
+FROM: john.lavorato@enron.com
+SUBJECT: Bruce
+MESSAGE-ID: <15874128.1075857726199.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\griffith-j\deleted_items\487.
+FROM: alexandra.villarreal@enron.com
+SUBJECT: RE:
+MESSAGE-ID: <14371921.1075852399637.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\whalley-l\all_documents\1004.
+FROM: greg.whalley@enron.com
+SUBJECT: Re: FW: delainey discussions
+MESSAGE-ID: <11472202.1075858017413.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\11144.
+FROM: mary.cook@enron.com
+SUBJECT: Re: Ideas on Blue/Green Files
+MESSAGE-ID: <13993505.1075847354873.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\guzman-m\_sent_mail\54.
+FROM: mark.guzman@enron.com
+SUBJECT: Re: your tv
+MESSAGE-ID: <17852216.1075840738355.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\2544.
+FROM: robert.cotten@enron.com
+SUBJECT: Meter # 9859
+MESSAGE-ID: <22681440.1075854104329.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hyatt-k\sent_items\32.
+FROM: kevin.hyatt@enron.com
+SUBJECT: RE: 1/15 - 15C1 from 1 to 2 is reserved for you.
+MESSAGE-ID: <12359069.1075860872340.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\schoolcraft-d\deleted_items\605.
+FROM: jerry.graves@enron.com
+SUBJECT: RE: SJ Planned Outages (Houston Outage Meeting)
+MESSAGE-ID: <530261.1075860742119.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\sanders-r\sent\132.
+FROM: richard.sanders@enron.com
+SUBJECT: Re: Houston Pipe Line Company vs. Deer Park Rail Terminal, Inc.
+MESSAGE-ID: <10782694.1075853254116.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\presto-k\sent_items\857.
+FROM: kevin.presto@enron.com
+SUBJECT: Re: (no subject)
+MESSAGE-ID: <3048383.1075854850770.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\sent\319.
+FROM: steven.kean@enron.com
+SUBJECT: Re: Public Report 09-20
+MESSAGE-ID: <2750115.1075846381634.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\south-s\discussion_threads\81.
+FROM: linda.w.humphrey@williams.com
+SUBJECT: All Shippers Notification: 01-237 - SOLICITING ELECTRONIC BIDS FO	R AVAILABLE FIRM MAINLINE TRANSPORTATION CAPACITY ON NORTHWEST'S TRANSMIS	SION SYSTEM
+MESSAGE-ID: <24219538.1075844993768.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\allen-p\all_documents\452.
+FROM: phillip.allen@enron.com
+SUBJECT: Re: Buyout
+MESSAGE-ID: <12458711.1075855695961.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\guzman-m\_sent_mail\349.
+FROM: mark.guzman@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <6983832.1075840745082.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\sent_items\289.
+FROM: j..farmer@enron.com
+SUBJECT: RE: Tenaska IV
+MESSAGE-ID: <24606405.1075852212940.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\salisbury-h\inbox\816.
+FROM: amy.fitzpatrick@enron.com
+SUBJECT: RE: Here's my resume.
+MESSAGE-ID: <860476.1075841522293.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hernandez-j\discussion_threads\675.
+FROM: internet-html@emazing.com
+SUBJECT: EMAZING Internet Tip of the Day - Martha Makes It Easy
+MESSAGE-ID: <26967732.1075855546121.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\skilling-j\all_documents\145.
+FROM: mike_buttrey@mhbt.com
+SUBJECT: RE: 2001 U.S. Open
+MESSAGE-ID: <7838041.1075840070101.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\brawner-s\discussion_threads\51.
+FROM: tdoremus@tfsbrokers.com
+SUBJECT: AGA Withdrawal Worksheet
+MESSAGE-ID: <32329531.1075856118214.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\love-p\discussion_threads\503.
+FROM: phillip.love@enron.com
+SUBJECT: 
+MESSAGE-ID: <2930100.1075858271763.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\discussion_threads\1496.
+FROM: susan.scott@enron.com
+SUBJECT: Re: Travel
+MESSAGE-ID: <21169528.1075846787377.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dorland-c\sent_items\62.
+FROM: chris.dorland@enron.com
+SUBJECT: RE: so you don't feel left out
+MESSAGE-ID: <23001706.1075840412149.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kitchen-l\inbox\65.
+FROM: john.magovern@ubsw.com
+SUBJECT: Re: Final Collateral Annexes
+MESSAGE-ID: <17769873.1075840954994.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lenhart-m\all_documents\461.
+FROM: matthew.lenhart@enron.com
+SUBJECT: Re: Golf Monday
+MESSAGE-ID: <31932477.1075849749644.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\nemec-g\notes_inbox\122.
+FROM: jackie.morgan@enron.com
+SUBJECT: Re: Entex Gas Marketing contracts
+MESSAGE-ID: <6472677.1075842636778.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lenhart-m\sent\1219.
+FROM: matthew.lenhart@enron.com
+SUBJECT: Re: Re[4]: mulletsgalore ripped off!
+MESSAGE-ID: <21118775.1075858142495.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\all_documents\1036.
+FROM: mjones7@txu.com
+SUBJECT: Re: Enron / HPL Actuals for August 11-13, 2000
+MESSAGE-ID: <29329185.1075853990362.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\all_documents\895.
+FROM: rochmanm@spurr.org
+SUBJECT: RE: Proposed revisions to CSA Letter
+MESSAGE-ID: <9330649.1075846680785.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\discussion_threads\2930.
+FROM: vince.kaminski@enron.com
+SUBJECT: 
+MESSAGE-ID: <8882833.1075856398266.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lenhart-m\all_documents\1167.
+FROM: matthew.lenhart@enron.com
+SUBJECT: Re: Re[6]: The Joys of Marriage
+MESSAGE-ID: <19656622.1075858081871.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\nemec-g\all_documents\1740.
+FROM: kay.young@enron.com
+SUBJECT: Re: CA Data Sheet
+MESSAGE-ID: <27958171.1075842621097.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\allen-p\all_documents\385.
+FROM: phillip.allen@enron.com
+SUBJECT: Re: FERC's Prospective Mitigation and Monitoring Plan for CA Wholesale Electric Markets
+MESSAGE-ID: <21932146.1075855694506.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\discussion_threads\3668.
+FROM: rakesh.bharati@enron.com
+SUBJECT: Jedi Shares
+MESSAGE-ID: <31503158.1075856417597.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\skilling-j\discussion_threads\370.
+FROM: bert.frazier@enron.com
+SUBJECT: Houston Fire Department Search Committee
+MESSAGE-ID: <12476680.1075840092640.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\sent\5654.
+FROM: tana.jones@enron.com
+SUBJECT: Re: Meeting Scheduled; Re: Financial Procedures
+MESSAGE-ID: <7854187.1075847547094.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\fossum-d\discussion_threads\793.
+FROM: emily.sellers@enron.com
+SUBJECT: Weekly Significant Litigation Report
+MESSAGE-ID: <7392384.1075842477461.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\discussion_threads\1442.
+FROM: timothy.ray@enron.com
+SUBJECT: Re: New Power Set Up on Interstate Pipelines
+MESSAGE-ID: <7677591.1075853764204.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\staab-t\sent_items\124.
+FROM: theresa.staab@enron.com
+SUBJECT: RE: FUGG Imbalances
+MESSAGE-ID: <15028707.1075862393315.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shackleton-s\notes_inbox\3197.
+FROM: tanya.rohauer@enron.com
+SUBJECT: Re: softs trading
+MESSAGE-ID: <20835354.1075844823102.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\754.
+FROM: lee.papayoti@enron.com
+SUBJECT: Re: March 2000 Activity ; Enichem Elastomers Americas, Inc.
+MESSAGE-ID: <10674483.1075854061615.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lay-k\discussion_threads\744.
+FROM: hall-b@msn.com
+SUBJECT: Government of Canad's Position
+MESSAGE-ID: <7876038.1075840250809.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\793.
+FROM: max_s_bulk@calpx.com
+SUBJECT: Re: [Fwd: Draft Definition of Seasonal Super Peak Market]
+MESSAGE-ID: <11992363.1075842953549.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\sent\169.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: So Cal Edison Claims Withholding of Pipeline Capacity
+MESSAGE-ID: <26815403.1075843188185.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\quigley-d\myfriends\137.
+FROM: siva66@mail.ev1.net
+SUBJECT: Re:
+MESSAGE-ID: <23584786.1075841456303.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\symes-k\_sent_mail\503.
+FROM: kate.symes@enron.com
+SUBJECT: Re: deal 297846
+MESSAGE-ID: <12193865.1075841921529.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\sager-e\notes_inbox\504.
+FROM: david.portz@enron.com
+SUBJECT: Re: FW: Calpine 2002-04 offpeak firm confirmation
+MESSAGE-ID: <11756812.1075859544020.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\cuilla-m\discussion_threads\51.
+FROM: martin.cuilla@enron.com
+SUBJECT: Dave Matthews Tickets
+MESSAGE-ID: <4199555.1075858075359.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\10650.
+FROM: samuel.schott@enron.com
+SUBJECT: Re: EOL approvals, 03-29-01 _ GCP Response
+MESSAGE-ID: <14738936.1075847339816.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\personal\10.
+FROM: susan.scott@enron.com
+SUBJECT: RE:!
+MESSAGE-ID: <2414609.1075846719242.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\quigley-d\private_folders\kq___dq\38.
+FROM: kay.quigley@enron.com
+SUBJECT: Re: couch
+MESSAGE-ID: <2828289.1075841457953.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\discussion_threads\5045.
+FROM: vince.kaminski@enron.com
+SUBJECT: Brad Romine
+MESSAGE-ID: <4427164.1075856810438.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\watson-k\sent_items\194.
+FROM: kimberly.watson@enron.com
+SUBJECT: RE: Question
+MESSAGE-ID: <29935092.1075852895030.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\3484.
+FROM: roger.yang@enron.com
+SUBJECT: Re: SDG&E
+MESSAGE-ID: <31545428.1075843032120.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\cash-m\sent\8.
+FROM: michelle.cash@enron.com
+SUBJECT: Re: Alonzo Williams
+MESSAGE-ID: <26288458.1075853552242.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\stclair-c\sent\454.
+FROM: carol.clair@enron.com
+SUBJECT: RE: Enron Guaranty
+MESSAGE-ID: <21945829.1075842120185.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\_sent_mail\1278.
+FROM: chris.germany@enron.com
+SUBJECT: Re: East Tennessee - Nora Rate
+MESSAGE-ID: <4999558.1075853841274.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\bass-e\notes_inbox\165.
+FROM: david.baumbach@enron.com
+SUBJECT: Re: Prudencies
+MESSAGE-ID: <31548212.1075854667292.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\arnold-j\discussion_threads\394.
+FROM: john.arnold@enron.com
+SUBJECT: 
+MESSAGE-ID: <1237493.1075857626186.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\haedicke-m\sent\980.
+FROM: mark.haedicke@enron.com
+SUBJECT: Re: Legal folks in ESA
+MESSAGE-ID: <4566523.1075845065588.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\discussion_threads\1515.
+FROM: lisa.a.meador@chase.com
+SUBJECT: Re: Hi girls...
+MESSAGE-ID: <14984883.1075846787875.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\perlingiere-d\all_documents\2752.
+FROM: debra.perlingiere@enron.com
+SUBJECT: Re: Greene Energy
+MESSAGE-ID: <30946673.1075842371376.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hain-m\discussion_threads\619.
+FROM: npickover@bracepatt.com
+SUBJECT: Orders/Notices
+MESSAGE-ID: <1415062.1075860401091.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hyvl-d\gas\wisconsin\4.
+FROM: kdecell@gassupplyconsulting.com
+SUBJECT: RE: WPS contract
+MESSAGE-ID: <32095144.1075842263460.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\blair-l\sent_items\432.
+FROM: lynn.blair@enron.com
+SUBJECT: RE: TMS Small Talk upgrade testing
+MESSAGE-ID: <10536841.1075853073309.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\sent\1638.
+FROM: tana.jones@enron.com
+SUBJECT: Re: Talisman ETA
+MESSAGE-ID: <4552662.1075847190159.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\all_documents\9053.
+FROM: john.arnold@enron.com
+SUBJECT: Re: VaR
+MESSAGE-ID: <2735542.1075856731316.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\skilling-j\discussion_threads\174.
+FROM: fredinvt@juno.com
+SUBJECT: 
+MESSAGE-ID: <13472381.1075840086920.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\1072.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: Proposal to Lower ISO Price Cap
+MESSAGE-ID: <21352011.1075842960798.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\all_documents\8209.
+FROM: mark.taylor@enron.com
+SUBJECT: RE: Trustees meeting
+MESSAGE-ID: <20440122.1075860205127.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\notes_inbox\371.
+FROM: julianna.grisham@halliburton.com
+SUBJECT: RE: A Christmas Tasters
+MESSAGE-ID: <7670672.1075846796492.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\arnold-j\_sent_mail\37.
+FROM: john.arnold@enron.com
+SUBJECT: Re: NY
+MESSAGE-ID: <9782041.1075857594988.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\cash-m\all_documents\65.
+FROM: michelle.cash@enron.com
+SUBJECT: Re: Oxley
+MESSAGE-ID: <15065519.1075853547237.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shankman-j\all_documents\400.
+FROM: jeffrey.shankman@enron.com
+SUBJECT: Re: EnronOnline Broker Client
+MESSAGE-ID: <7430732.1075857514935.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\bass-e\discussion_threads\872.
+FROM: shanna.husser@enron.com
+SUBJECT: Yahoo!'s Picks of the Week (November 20, 2000)
+MESSAGE-ID: <3356039.1075854645803.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lenhart-m\discussion_threads\317.
+FROM: matthew.lenhart@enron.com
+SUBJECT: 
+MESSAGE-ID: <8266056.1075858128735.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\blair-l\inbox\86.
+FROM: jknight@oneok.com
+SUBJECT: RE: Bushton Balance through 10-26-01 - UPDATE - Please disregard 	previous Bushton Report for 26th!
+MESSAGE-ID: <32011995.1075853082032.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\perlingiere-d\sent\448.
+FROM: debra.perlingiere@enron.com
+SUBJECT: Re: Heartland Energy Group
+MESSAGE-ID: <21241502.1075842320514.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shapiro-r\discussion_threads\109.
+FROM: enron.announcements@enron.com
+SUBJECT: Re-Alignment
+MESSAGE-ID: <5301242.1075844227484.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\perlingiere-d\all_documents\441.
+FROM: debra.perlingiere@enron.com
+SUBJECT: RE:
+MESSAGE-ID: <14332725.1075842296200.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\haedicke-m\all_documents\703.
+FROM: mark.haedicke@enron.com
+SUBJECT: Re: Fwd: Joint Defense Agreement
+MESSAGE-ID: <31649948.1075845013231.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\453.
+FROM: stella.morris@enron.com
+SUBJECT: Sale to Shoreline
+MESSAGE-ID: <30691077.1075854054646.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\all_documents\3527.
+FROM: daren.farmer@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <30850813.1075854200215.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\all_documents\6495.
+FROM: kay.mann@enron.com
+SUBJECT: RE: Save the Date -- Star Wars: The Magic of Myth
+MESSAGE-ID: <11664349.1075845739192.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\sent\4080.
+FROM: kay.mann@enron.com
+SUBJECT: Re: GE- Standard Domestic Contract- Need your help
+MESSAGE-ID: <22760617.1075846018848.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\corman-s\sent_items\485.
+FROM: shelley.corman@enron.com
+SUBJECT: RE: 2001 Throughput.
+MESSAGE-ID: <31005216.1075861080051.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\taylor-m\inbox\lisa_j\52.
+FROM: lisa.jacobson@enron.com
+SUBJECT: RE: VOC ERC
+MESSAGE-ID: <6417581.1075862098700.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\stclair-c\all_documents\390.
+FROM: carol.clair@enron.com
+SUBJECT: Re: Utilicorp
+MESSAGE-ID: <4637068.1075842090664.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\may-l\discussion_threads\99.
+FROM: cathy@pira.com
+SUBJECT: PIRA's Current News & Analysis
+MESSAGE-ID: <5243742.1075857943162.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\archiving\untitled\2163.
+FROM: ricardo.charvel@enron.com
+SUBJECT: Re: Foreign country advocacy
+MESSAGE-ID: <21337123.1075846266207.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\4692.
+FROM: bob.hall@enron.com
+SUBJECT: Texas ENA off-system rates
+MESSAGE-ID: <11832335.1075854292307.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\guzman-m\discussion_threads\772.
+FROM: jdquillen@yahoo.com
+SUBJECT: Fwd: Fw: Dad buys the clothes
+MESSAGE-ID: <10189457.1075840657135.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dorland-c\sent_items\561.
+FROM: chris.dorland@enron.com
+SUBJECT: RE: $ allocation
+MESSAGE-ID: <26219890.1075840424456.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\perlingiere-d\sent\751.
+FROM: debra.perlingiere@enron.com
+SUBJECT: Re: Election Party
+MESSAGE-ID: <10477513.1075842327356.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\9458.
+FROM: samuel.schott@enron.com
+SUBJECT: Re: EOL approvals, 2-20-01 _ GCP Response
+MESSAGE-ID: <1620805.1075847304460.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\delainey-d\_sent_mail\505.
+FROM: kay.chapman@enron.com
+SUBJECT: Re: QBR East Midstream
+MESSAGE-ID: <2206458.1075854490834.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\discussion_threads\3452.
+FROM: ann.schmidt@enron.com
+SUBJECT: Enron Mentions - 06/04/01
+MESSAGE-ID: <27409441.1075848191165.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\steffes-j\inbox\19.
+FROM: jeff.dasovich@enron.com
+SUBJECT: RE: Conversation with Edison re: Getting Negative CTC Paid
+MESSAGE-ID: <7169434.1075852524829.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hain-m\discussion_threads\72.
+FROM: mary.hain@enron.com
+SUBJECT: Re: Enron Data Responses for FERC's Bulk Power Investigation
+MESSAGE-ID: <21121543.1075860383922.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\discussion_threads\2689.
+FROM: kay.mann@enron.com
+SUBJECT: puppy update
+MESSAGE-ID: <4570012.1075845818494.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\5059.
+FROM: tana.jones@enron.com
+SUBJECT: Re: ENW NDA's to transfer from EBS
+MESSAGE-ID: <23709001.1075847038143.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rogers-b\discussion_threads\338.
+FROM: benjamin.rogers@enron.com
+SUBJECT: Re: Power Research
+MESSAGE-ID: <12674846.1075857186983.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\3715.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: Deferral Access
+MESSAGE-ID: <347752.1075843041159.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\sent_items\123.
+FROM: chris.germany@enron.com
+SUBJECT: RE: Sitara change for Decmeber 2001
+MESSAGE-ID: <16471069.1075840511429.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\maggi-m\deleted_items\1592.
+FROM: mike.maggi@enron.com
+SUBJECT: RE:
+MESSAGE-ID: <32701645.1075862040818.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\ruscitti-k\sent\41.
+FROM: kevin.ruscitti@enron.com
+SUBJECT: Re: appt
+MESSAGE-ID: <23120015.1075857824463.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\archiving\untitled\5442.
+FROM: catherine.mckalip-thompson@enron.com
+SUBJECT: Re: Ken Lay Statement to Employees on Bush CO2 Policy
+MESSAGE-ID: <21397937.1075847764848.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rogers-b\sent\754.
+FROM: benjamin.rogers@enron.com
+SUBJECT: Re: Final Four tickets
+MESSAGE-ID: <27863923.1075857242495.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kean-s\attachments\23.
+FROM: robert.hemstock@enron.com
+SUBJECT: Re: Outline memo for paper on rules changes in other markets
+MESSAGE-ID: <488148.1075850993313.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rodrique-r\sent\480.
+FROM: robin.rodrigue@enron.com
+SUBJECT: Re: Shreveport
+MESSAGE-ID: <13448016.1075858362375.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\scott-s\discussion_threads\1271.
+FROM: enron.announcements@enron.com
+SUBJECT: Ameriflash Newsletter
+MESSAGE-ID: <21931401.1075846780232.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rodrique-r\all_documents\796.
+FROM: robin.rodrigue@enron.com
+SUBJECT: Re: I have us Long 311 contracts...
+MESSAGE-ID: <5600968.1075858339475.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\13157.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: SF Gate: Enron's secret bid to save deregulation/PRIVATE MEETING: Chairman pitches his plan to prominent Californians
+MESSAGE-ID: <32333372.1075843537023.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\sent\948.
+FROM: chris.germany@enron.com
+SUBJECT: Re: Tetco Invoice - March
+MESSAGE-ID: <5314306.1075853804161.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\1677.
+FROM: robert.lloyd@enron.com
+SUBJECT: Settelement Request for an Equistar "Buyback" ticket with ENA as Shipper
+MESSAGE-ID: <13239683.1075854083210.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hernandez-j\discussion_threads\174.
+FROM: judy.hernandez@enron.com
+SUBJECT: Fwd: joke
+MESSAGE-ID: <17783658.1075855525095.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lavorato-j\sent_items\405.
+FROM: lavorato@enron.com
+SUBJECT: RE: Dinner for the Trading Track Candidates
+MESSAGE-ID: <22559713.1075857692022.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\rice\212.
+FROM: ghoshr@ruf.rice.edu
+SUBJECT: RE: Hello team
+MESSAGE-ID: <20840495.1075856628253.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\derrick-j\discussion_threads\43.
+FROM: tracy.ralston@enron.com
+SUBJECT: Newsletter: GlobalFlash!
+MESSAGE-ID: <30494700.1075842919757.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\symes-k\discussion_threads\30.
+FROM: kate.symes@enron.com
+SUBJECT: Time Management
+MESSAGE-ID: <25936068.1075841761963.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\sent\179.
+FROM: daren.farmer@enron.com
+SUBJECT: Re: Meter #1552
+MESSAGE-ID: <8813835.1075854153479.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\brawner-s\discussion_threads\2.
+FROM: enron.announcements@enron.com
+SUBJECT: PAC REMINDER
+MESSAGE-ID: <24676892.1075856116972.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\tholt-j\sent\19.
+FROM: jane.tholt@enron.com
+SUBJECT: Re: San Diego - Deal 341242
+MESSAGE-ID: <31621553.1075857497734.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\sent\538.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: Aztec Case
+MESSAGE-ID: <2775467.1075843196773.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\_sent_mail\29.
+FROM: kay.mann@enron.com
+SUBJECT: RE: Midway Interconnect Agreement
+MESSAGE-ID: <3755823.1075846028981.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\love-p\discussion_threads\626.
+FROM: imelda.trevino@enron.com
+SUBJECT: Resume on Chris Atherton for Req. # 108798
+MESSAGE-ID: <13880209.1075858274613.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shankman-j\sent\360.
+FROM: jeffrey.shankman@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <23363095.1075857554754.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\derrick-j\sent_items\9.
+FROM: james.derrick@enron.com
+SUBJECT: RE: California Litigation Team
+MESSAGE-ID: <4950889.1075845092325.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shackleton-s\sent_items\141.
+FROM: sara.shackleton@enron.com
+SUBJECT: RE: National Energy Group, Inc.
+MESSAGE-ID: <13844487.1075858808936.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hayslett-r\discussion_threads\322.
+FROM: morris.brassfield@enron.com
+SUBJECT: re: 2001 Goals & Objectives
+MESSAGE-ID: <3712344.1075844296349.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\fossum-d\sent\1113.
+FROM: drew.fossum@enron.com
+SUBJECT: Re: EOL Routing/Approval - Urgent
+MESSAGE-ID: <23718227.1075842558239.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\steffes-j\sent_items\232.
+FROM: d..steffes@enron.com
+SUBJECT: RE: FERC Discussion on Standards of Conduct NOPR
+MESSAGE-ID: <3276294.1075852505028.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\_sent_mail\171.
+FROM: daren.farmer@enron.com
+SUBJECT: Re: HPL Meter #980074 Bammel HPL D/P to Transco
+MESSAGE-ID: <30893166.1075854162093.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\sent\305.
+FROM: vince.kaminski@enron.com
+SUBJECT: Re: Visiting Enron May 4th
+MESSAGE-ID: <28153828.1075856442733.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hain-m\discussion_threads\720.
+FROM: rcarroll@bracepatt.com
+SUBJECT: Fwd: CalEnergy to sell on open market
+MESSAGE-ID: <22196577.1075860406443.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\cash-m\sent\226.
+FROM: michelle.cash@enron.com
+SUBJECT: Re: Don Baughman
+MESSAGE-ID: <8140243.1075860498144.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\lokay-m\discussion_threads\222.
+FROM: donna.vaughn@enron.com
+SUBJECT: GPG News Rerun- We are there!
+MESSAGE-ID: <12434877.1075844063858.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\symes-k\discussion_threads\3412.
+FROM: michael.tully@enron.com
+SUBJECT: West Desk Support Web Site
+MESSAGE-ID: <33405982.1075841851433.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\discussion_threads\1077.
+FROM: chris.germany@enron.com
+SUBJECT: Re: COH Choice for 4/21 - PLEASE READ - WEEKEND SETUP
+MESSAGE-ID: <17739319.1075853755753.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\bass-e\sent\629.
+FROM: eric.bass@enron.com
+SUBJECT: Re: Cancun
+MESSAGE-ID: <31760141.1075854699960.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\campbell-l\discussion_threads\1064.
+FROM: owner-nyiso_tech_exchange@lists.thebiz.net
+SUBJECT: Price reservations 12/07 (RTM) & 12/08 (DAM)
+MESSAGE-ID: <33295467.1075857871446.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\geaccone-t\_sent_mail\127.
+FROM: tracy.geaccone@enron.com
+SUBJECT: Re: EOTT December data
+MESSAGE-ID: <30464351.1075859055437.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shankman-j\sent\282.
+FROM: jeffrey.shankman@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <30051203.1075857553040.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\corman-s\inbox\archives\388.
+FROM: steve.january@enron.com
+SUBJECT: RE: Draft of "New" System Flow Request for 637 filing.
+MESSAGE-ID: <7395991.1075861094384.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\horton-s\discussion_threads\161.
+FROM: gisb1@aol.com
+SUBJECT: GISB Meeting Notes
+MESSAGE-ID: <18760810.1075844948929.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hyvl-d\all_documents\1417.
+FROM: muleman1@earthlink.net
+SUBJECT: Re: Mom's Birthday
+MESSAGE-ID: <14767133.1075842245367.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hain-m\discussion_threads\219.
+FROM: mary.hain@enron.com
+SUBJECT: Letters to terminate CalPX Participation Agreement
+MESSAGE-ID: <31435640.1075860387722.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\shankman-j\sent\409.
+FROM: jeffrey.shankman@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <3368576.1075857555929.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\jones-t\all_documents\11004.
+FROM: sara.shackleton@enron.com
+SUBJECT: Re: PLEASE READ:  Sonoco Products Company
+MESSAGE-ID: <22888833.1075847350574.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\dasovich-j\all_documents\9138.
+FROM: jeff.dasovich@enron.com
+SUBJECT: Re: PG&E SEC Filing
+MESSAGE-ID: <22589614.1075843358692.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\neal-s\sent_items\138.
+FROM: scott.neal@enron.com
+SUBJECT: RE: Beach Outing
+MESSAGE-ID: <16304839.1075845271944.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\germany-c\all_documents\2868.
+FROM: chris.germany@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <10955511.1075853864145.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\notes_inbox\20.
+FROM: suzanne.adams@enron.com
+SUBJECT: Re: David Marshall
+MESSAGE-ID: <17757301.1075845896895.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\mann-k\all_documents\6313.
+FROM: ben.jacoby@enron.com
+SUBJECT: RE: GE Turbines
+MESSAGE-ID: <16265027.1075845734514.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\farmer-d\discussion_threads\1196.
+FROM: ami.chokshi@enron.com
+SUBJECT: June 1 st
+MESSAGE-ID: <7602038.1075854071830.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\fossum-d\discussion_threads\273.
+FROM: drew.fossum@enron.com
+SUBJECT: EOL Transactions
+MESSAGE-ID: <28715647.1075842460249.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\discussion_threads\2668.
+FROM: mike.roberts@enron.com
+SUBJECT: New Position (Sam Smith)
+MESSAGE-ID: <1978903.1075856391463.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\brawner-s\all_documents\115.
+FROM: sandra.brawner@enron.com
+SUBJECT: Re:
+MESSAGE-ID: <31348384.1075856122106.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\nemec-g\notes_inbox\615.
+FROM: eric.gillaspie@enron.com
+SUBJECT: Re: Chambers 9/11/2000 Draft
+MESSAGE-ID: <15156775.1075842649804.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\kaminski-v\all_documents\3523.
+FROM: vince.kaminski@enron.com
+SUBJECT: Re: Enron, case study at Nordic business schools
+MESSAGE-ID: <4052159.1075856268944.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\hain-m\all_documents\862.
+FROM: mary.hain@enron.com
+SUBJECT: Re: PGE RFP
+MESSAGE-ID: <24797229.1075860369559.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\stclair-c\sent\2366.
+FROM: carol.clair@enron.com
+SUBJECT: RE: Kaiser
+MESSAGE-ID: <22312842.1075842209065.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+
+PATH: C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir\rogers-b\discussion_threads\436.
+FROM: dgioffre@hotmail.com
+SUBJECT: Re:
+MESSAGE-ID: <1343481.1075857189331.JavaMail.evans@thyme>
+IN-REPLY-TO: None
+REFERENCES: None
+

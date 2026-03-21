@@ -1,14 +1,16 @@
 import os
 import random
-from pathlib import Path
 from email import policy
 from email.parser import BytesParser
-from email.utils import parsedate_to_datetime, getaddresses
+from email.utils import getaddresses, parsedate_to_datetime
 
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
 from investigation.models import Employee, Message, MessageRecipient
+
+
+DEFAULT_DATASET_ROOT = r"C:\Users\gaspa\OneDrive\Bureau\projet_enron_discovery\enron_mail_20150507\maildir"
 
 
 def extract_text_from_message(msg):
@@ -84,47 +86,101 @@ def to_windows_path(path):
     return path_str
 
 
+def read_path_list(path_list_file):
+    encodings_to_try = ["utf-8", "utf-8-sig", "utf-16", "utf-16-le", "utf-16-be"]
+
+    for encoding in encodings_to_try:
+        try:
+            with open(path_list_file, "r", encoding=encoding) as f:
+                lines = [line.strip().lstrip("\ufeff") for line in f if line.strip()]
+            return lines
+        except UnicodeDecodeError:
+            continue
+
+    raise ValueError(f"Impossible de décoder le fichier : {path_list_file}")
+
+
 class Command(BaseCommand):
-    help = "Importe un petit échantillon de fichiers email en base"
+    help = "Importe un échantillon de fichiers email en base"
 
     def add_arguments(self, parser):
-        parser.add_argument("folder", type=str, help="Chemin vers le dossier contenant les emails")
         parser.add_argument(
             "--limit",
             type=int,
-            default=100,
-            help="Nombre max de fichiers à importer",
+            default=10,
+            help="Nombre de fichiers à importer aléatoirement",
+        )
+
+        parser.add_argument(
+            "--path-list",
+            type=str,
+            help="Chemin vers un fichier texte contenant une liste de chemins de mails à importer",
+        )
+
+        parser.add_argument(
+            "--dataset-root",
+            type=str,
+            default=DEFAULT_DATASET_ROOT,
+            help="Chemin vers la racine du dataset maildir pour l'import aléatoire",
         )
 
     @transaction.atomic
     def handle(self, *args, **options):
-        folder = Path(options["folder"])
         limit = options["limit"]
+        path_list_file = options.get("path_list")
+        dataset_root = options["dataset_root"]
 
-        if not folder.exists() or not folder.is_dir():
-            self.stdout.write(self.style.ERROR(f"Dossier introuvable : {folder}"))
-            return
+        if path_list_file:
+            if not os.path.exists(path_list_file):
+                self.stdout.write(
+                    self.style.ERROR(f"Fichier de chemins introuvable : {path_list_file}")
+                )
+                return
 
-        all_files = []
-        for root, dirs, files in os.walk(folder):
-            for filename in files:
-                all_files.append(os.path.join(root, filename))
+            selected_files = read_path_list(path_list_file)
 
-        random.shuffle(all_files)
-        eml_files = all_files[:limit]
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f"Liste de chemins chargée : {len(selected_files)} fichiers"
+                )
+            )
+        else:
+            if not os.path.exists(dataset_root) or not os.path.isdir(dataset_root):
+                self.stdout.write(
+                    self.style.ERROR(f"Dossier dataset introuvable : {dataset_root}")
+                )
+                return
 
-        self.stdout.write(f"Dossier scanné : {folder}")
-        self.stdout.write(f"Fichiers trouvés : {len(eml_files)}")
+            all_files = []
 
-        if not eml_files:
+            for root, _, files in os.walk(dataset_root):
+                for filename in files:
+                    all_files.append(os.path.join(root, filename))
+
+            random.shuffle(all_files)
+            selected_files = all_files[:limit]
+
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f"Dossier scanné : {dataset_root}"
+                )
+            )
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f"Échantillon aléatoire sélectionné : {len(selected_files)} fichiers"
+                )
+            )
+
+        if not selected_files:
             self.stdout.write(self.style.WARNING("Aucun fichier email trouvé."))
             return
 
         imported = 0
-        skipped = 0
+        skipped_existing = 0
+        errors = 0
         linked_threads = 0
 
-        for file_path in eml_files:
+        for file_path in selected_files:
             try:
                 safe_path = to_windows_path(file_path)
 
@@ -168,7 +224,7 @@ class Command(BaseCommand):
                 )
 
                 if not created:
-                    skipped += 1
+                    skipped_existing += 1
                     continue
 
                 recipients_map = [
@@ -195,7 +251,7 @@ class Command(BaseCommand):
                 imported += 1
 
             except Exception as e:
-                skipped += 1
+                errors += 1
                 self.stdout.write(
                     self.style.WARNING(f"Erreur sur {file_path}: {e}")
                 )
@@ -218,6 +274,10 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"Import terminé. Importés: {imported} | Ignorés/erreurs: {skipped} | Threads liés: {linked_threads}"
+                f"Import terminé. "
+                f"Importés: {imported} | "
+                f"Déjà présents: {skipped_existing} | "
+                f"Erreurs: {errors} | "
+                f"Threads liés: {linked_threads}"
             )
         )
