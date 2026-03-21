@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Détail du message - Enron Discovery</title>
-</head>
-<body>
+{% extends "investigation/base.html" %}
+
+{% block title %}Détail du message - Enron Discovery{% endblock %}
+
+{% block content %}
+<div class="card">
     <p>
-        <a href="{% url 'message_list' %}">← Retour à la liste</a>
+        <a class="btn btn-secondary" href="{% url 'message_list' %}">← Retour à la liste</a>
     </p>
 
-    <h1>{{ message.subject|default:"(Sans objet)" }}</h1>
+    <h2>{{ message.subject|default:"(Sans objet)" }}</h2>
 
-    <p><strong>ID :</strong> {{ message.id }}</p>
-
-    <p>
+    <p class="muted">
+        <strong>ID :</strong> {{ message.id }}<br>
         <strong>Expéditeur :</strong>
         {% if message.sender %}
             {{ message.sender }}
         {% else %}
             Inconnu
         {% endif %}
-    </p>
-
-    <p>
+        <br>
         <strong>Date :</strong>
         {% if message.sent_at %}
             {{ message.sent_at|date:"d/m/Y H:i" }}
@@ -30,51 +26,46 @@
             Non renseignée
         {% endif %}
     </p>
+</div>
 
+<div class="card">
+    <h3>Métadonnées</h3>
     <p><strong>Message-ID :</strong> {{ message.message_id_header|default:"-" }}</p>
     <p><strong>In-Reply-To :</strong> {{ message.in_reply_to_header|default:"-" }}</p>
     <p><strong>Chemin brut :</strong> {{ message.raw_path|default:"-" }}</p>
+</div>
 
-    <h2>Destinataires</h2>
-    {% if message.recipients.all %}
-        <ul>
-            {% for recipient in message.recipients.all %}
-                <li>{{ recipient }}</li>
-            {% empty %}
-                <li>Aucun destinataire</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Aucun destinataire</p>
-    {% endif %}
+<div class="card">
+    <h3>Destinataires</h3>
+    <ul>
+        {% for recipient in message.recipients.all %}
+            <li>{{ recipient }}</li>
+        {% empty %}
+            <li>Aucun destinataire</li>
+        {% endfor %}
+    </ul>
+</div>
 
-    <h2>Corps du message</h2>
-    <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 12px;">
-        {% if message.body_text %}
-            {{ message.body_text }}
-        {% else %}
-            Aucun contenu
-        {% endif %}
-    </div>
+<div class="card">
+    <h3>Corps du message</h3>
+    <pre class="message-body">{% if message.body_text %}{{ message.body_text }}{% else %}Aucun contenu{% endif %}</pre>
+</div>
 
-    <h2>Réponses associées</h2>
-    {% if message.replies.all %}
-        <ul>
-            {% for reply in message.replies.all %}
-                <li>
-                    <a href="{% url 'message_detail' reply.id %}">
-                        {{ reply.subject|default:"(Sans objet)" }}
-                    </a>
-                    {% if reply.sent_at %}
-                        — {{ reply.sent_at|date:"d/m/Y H:i" }}
-                    {% endif %}
-                </li>
-            {% empty %}
-                <li>Aucune réponse liée</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Aucune réponse liée.</p>
-    {% endif %}
-</body>
-</html>
+<div class="card">
+    <h3>Réponses associées</h3>
+    <ul>
+        {% for reply in message.replies.all %}
+            <li>
+                <a href="{% url 'message_detail' reply.id %}">
+                    {{ reply.subject|default:"(Sans objet)" }}
+                </a>
+                {% if reply.sent_at %}
+                    — {{ reply.sent_at|date:"d/m/Y H:i" }}
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>Aucune réponse liée.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

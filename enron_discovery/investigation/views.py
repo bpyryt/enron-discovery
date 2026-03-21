@@ -6,6 +6,10 @@ from django.shortcuts import get_object_or_404, render
 from .models import Employee, Message
 
 
+def home(request):
+    return render(request, "investigation/home.html")
+
+
 def message_list(request):
     q = request.GET.get("q", "").strip()
     sender = request.GET.get("sender", "").strip()

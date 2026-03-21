@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Messages - Enron Discovery</title>
-</head>
-<body>
-    <h1>Messages</h1>
+{% extends "investigation/base.html" %}
 
-    <form method="get" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap; align-items: end;">
+{% block title %}Messages - Enron Discovery{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Messages</h2>
+    <p class="muted">Recherche full-text PostgreSQL avec filtres par expéditeur et dates.</p>
+
+    <form method="get" class="filter-form">
         <div>
             <label for="q">Recherche</label><br>
             <input
@@ -16,7 +16,7 @@
                 name="q"
                 value="{{ q }}"
                 placeholder="Sujet, contenu, expéditeur"
-                style="width: 280px;"
+                style="width: 260px;"
             >
         </div>
 
@@ -28,8 +28,8 @@
                 name="sender"
                 list="sender-emails"
                 value="{{ sender }}"
-                placeholder="Tape un email expéditeur"
-                style="width: 280px;"
+                placeholder="Tape un email"
+                style="width: 260px;"
             >
             <datalist id="sender-emails">
                 {% for sender_obj in senders %}
@@ -49,60 +49,66 @@
         </div>
 
         <div>
-            <button type="submit">Filtrer</button>
-            <a href="{% url 'message_list' %}" style="margin-left: 10px;">Réinitialiser</a>
+            <button class="btn" type="submit">Filtrer</button>
+            <a class="btn btn-secondary" href="{% url 'message_list' %}">Réinitialiser</a>
         </div>
     </form>
+</div>
 
+<div class="card">
     {% if q or sender or date_from or date_to %}
         <p>
-            {{ result_count }} message{{ result_count|pluralize }} trouvé{{ result_count|pluralize }}
+            <strong>{{ result_count }}</strong> message{{ result_count|pluralize }} trouvé{{ result_count|pluralize }}
             avec les filtres actuels.
         </p>
     {% else %}
-        <p>{{ result_count }} message{{ result_count|pluralize }} au total.</p>
+        <p><strong>{{ result_count }}</strong> message{{ result_count|pluralize }} au total.</p>
     {% endif %}
+</div>
 
-    <hr>
+{% if messages %}
+    {% for message in messages %}
+        <div class="card message-card">
+            <h3>
+                <a class="title-link" href="{% url 'message_detail' message.id %}">
+                    {{ message.subject|default:"(Sans objet)" }}
+                </a>
+            </h3>
 
-    {% if messages %}
-        {% for message in messages %}
-            <div style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #ccc;">
-                <h3 style="margin-bottom: 8px;">
-                    <a href="{% url 'message_detail' message.id %}">
-                        {{ message.subject|default:"(Sans objet)" }}
-                    </a>
-                </h3>
+            <p class="muted">
+                <strong>Expéditeur :</strong>
+                {% if message.sender %}
+                    {{ message.sender }}
+                {% else %}
+                    Inconnu
+                {% endif %}
+                &nbsp; | &nbsp;
+                <strong>Date :</strong>
+                {% if message.sent_at %}
+                    {{ message.sent_at|date:"d/m/Y H:i" }}
+                {% else %}
+                    Non renseignée
+                {% endif %}
+            </p>
 
-                <p style="margin: 0 0 8px 0;">
-                    <strong>Expéditeur :</strong>
-                    {% if message.sender %}
-                        {{ message.sender }}
-                    {% else %}
-                        Inconnu
-                    {% endif %}
-                    <br>
-                    <strong>Date :</strong>
-                    {% if message.sent_at %}
-                        {{ message.sent_at|date:"d/m/Y H:i" }}
-                    {% else %}
-                        Non renseignée
-                    {% endif %}
-                </p>
+            <p>
+                {% if message.body_clean %}
+                    {{ message.body_clean|truncatechars:240 }}
+                {% elif message.body_text %}
+                    {{ message.body_text|truncatechars:240 }}
+                {% else %}
+                    <em>Aucun contenu</em>
+                {% endif %}
+            </p>
 
-                <p style="margin: 0;">
-                    {% if message.body_clean %}
-                        {{ message.body_clean|truncatechars:220 }}
-                    {% elif message.body_text %}
-                        {{ message.body_text|truncatechars:220 }}
-                    {% else %}
-                        <em>Aucun contenu</em>
-                    {% endif %}
-                </p>
-            </div>
-        {% endfor %}
-    {% else %}
+            <p>
+                <a class="btn" href="{% url 'message_detail' message.id %}">Voir le détail</a>
+            </p>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="card">
         <p>Aucun message trouvé.</p>
-    {% endif %}
-</body>
-</html>
+    </div>
+{% endif %}
+{% endblock %}

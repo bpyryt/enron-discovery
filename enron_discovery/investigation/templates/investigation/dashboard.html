@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard - Enron Discovery</title>
-</head>
-<body>
-    <h1>Dashboard Enron Discovery</h1>
+{% extends "investigation/base.html" %}
 
-    <p>
-        <a href="{% url 'message_list' %}">Voir les messages</a>
-    </p>
+{% block title %}Dashboard - Enron Discovery{% endblock %}
 
-    <h2>Statistiques globales</h2>
-    <ul>
-        <li><strong>Nombre total de messages :</strong> {{ total_messages }}</li>
-        <li><strong>Nombre total d'expéditeurs :</strong> {{ total_senders }}</li>
-    </ul>
+{% block content %}
+<div class="card">
+    <h2>Dashboard</h2>
+    <p class="muted">Vue d’ensemble des statistiques principales du dataset importé.</p>
+</div>
 
-    <h2>Volume de mails par mois</h2>
+<div class="grid">
+    <div class="card">
+        <h3>Total messages</h3>
+        <p style="font-size: 32px; font-weight: bold;">{{ total_messages }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Total expéditeurs</h3>
+        <p style="font-size: 32px; font-weight: bold;">{{ total_senders }}</p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Volume de mails par mois</h3>
     {% if messages_by_month %}
-        <table border="1" cellpadding="6" cellspacing="0">
+        <table>
             <thead>
                 <tr>
                     <th>Mois</th>
@@ -44,10 +48,12 @@
     {% else %}
         <p>Aucune donnée disponible.</p>
     {% endif %}
+</div>
 
-    <h2>Top 10 des expéditeurs les plus actifs</h2>
+<div class="card">
+    <h3>Top 10 des expéditeurs les plus actifs</h3>
     {% if top_senders %}
-        <table border="1" cellpadding="6" cellspacing="0">
+        <table>
             <thead>
                 <tr>
                     <th>Rang</th>
@@ -68,5 +74,5 @@
     {% else %}
         <p>Aucun expéditeur trouvé.</p>
     {% endif %}
-</body>
-</html>
+</div>
+{% endblock %}

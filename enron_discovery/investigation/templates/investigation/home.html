@@ -1,0 +1,38 @@
+{% extends "investigation/base.html" %}
+
+{% block title %}Accueil - Enron Discovery{% endblock %}
+
+{% block content %}
+<div class="card hero">
+    <h2>Bienvenue sur Enron Discovery</h2>
+    <p>
+        Application Django d'exploration d'emails Enron avec recherche full-text PostgreSQL,
+        filtres par expéditeur et dates, et dashboard statistique.
+    </p>
+    <p>
+        Utilise les liens ci-dessous pour commencer.
+    </p>
+    <p>
+        <a class="btn" href="{% url 'dashboard' %}">Voir le dashboard</a>
+        <a class="btn btn-secondary" href="{% url 'message_list' %}">Explorer les messages</a>
+    </p>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h3>Dashboard</h3>
+        <p class="muted">
+            Consulte les statistiques globales, le volume de mails par mois et les expéditeurs les plus actifs.
+        </p>
+        <p><a class="btn" href="{% url 'dashboard' %}">Ouvrir</a></p>
+    </div>
+
+    <div class="card">
+        <h3>Messages</h3>
+        <p class="muted">
+            Recherche les emails avec PostgreSQL full-text search et filtre par expéditeur ou plage de dates.
+        </p>
+        <p><a class="btn" href="{% url 'message_list' %}">Ouvrir</a></p>
+    </div>
+</div>
+{% endblock %}
