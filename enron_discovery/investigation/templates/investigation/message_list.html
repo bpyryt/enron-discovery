@@ -48,7 +48,9 @@
     {% for message in messages %}
         <div class="message">
             <div class="subject">
-                {{ message.subject|default:"(sans sujet)" }}
+                <a href="{% url 'message_detail' message.id %}">
+                    {{ message.subject|default:"(sans sujet)" }}
+                </a>
             </div>
 
             <div class="meta">
