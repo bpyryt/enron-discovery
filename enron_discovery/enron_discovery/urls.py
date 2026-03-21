@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.http import HttpResponse
-from django.urls import path
+from django.urls import path, include
 
 
 def healthcheck(_request):
@@ -9,5 +9,6 @@ def healthcheck(_request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('messages/', include('investigation.urls')),
     path('', healthcheck, name='healthcheck'),
 ]

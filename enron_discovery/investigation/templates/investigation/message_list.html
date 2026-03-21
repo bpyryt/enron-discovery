@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background: #f7f7f7;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .message {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        .subject {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .body {
+            white-space: pre-wrap;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des messages</h1>
+
+    <p>{{ messages|length }} message(s) affiché(s)</p>
+
+    {% for message in messages %}
+        <div class="message">
+            <div class="subject">
+                {{ message.subject|default:"(sans sujet)" }}
+            </div>
+
+            <div class="meta">
+                ID : {{ message.id }}
+                {% if message.sender %}
+                    | Expéditeur : {{ message.sender.email }}
+                {% endif %}
+                {% if message.sent_at %}
+                    | Date : {{ message.sent_at }}
+                {% endif %}
+            </div>
+
+            <div class="body">
+                {{ message.body_text|default:"(pas de contenu texte)"|truncatechars:400 }}
+            </div>
+        </div>
+    {% empty %}
+        <p>Aucun message trouvé.</p>
+    {% endfor %}
+</body>
+</html>
