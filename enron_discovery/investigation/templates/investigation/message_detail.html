@@ -108,6 +108,26 @@
             {% endfor %}
         </ul>
 
+        <div class="section-title">Réponses associées</div>
+
+        <ul>
+            {% for reply in message.replies.all %}
+                <li style="margin-bottom: 10px;">
+                    <a href="{% url 'message_detail' reply.id %}">
+                        {{ reply.subject|default:"(sans sujet)" }}
+                    </a>
+                    <br>
+                    <small>
+                        ID : {{ reply.id }}
+                        {% if reply.sender %} | Expéditeur : {{ reply.sender.email }}{% endif %}
+                        {% if reply.sent_at %} | Date : {{ reply.sent_at }}{% endif %}
+                    </small>
+                </li>
+            {% empty %}
+                <li>Aucune réponse associée.</li>
+            {% endfor %}
+        </ul>
+
         <div class="section-title">Contenu du message</div>
 
         <div class="body">

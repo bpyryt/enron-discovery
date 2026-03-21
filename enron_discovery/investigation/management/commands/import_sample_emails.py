@@ -1,4 +1,5 @@
 import os
+import random
 from pathlib import Path
 from email import policy
 from email.parser import BytesParser
@@ -109,6 +110,7 @@ class Command(BaseCommand):
             for filename in files:
                 all_files.append(os.path.join(root, filename))
 
+        random.shuffle(all_files)
         eml_files = all_files[:limit]
 
         self.stdout.write(f"Dossier scanné : {folder}")
@@ -120,6 +122,7 @@ class Command(BaseCommand):
 
         imported = 0
         skipped = 0
+        linked_threads = 0
 
         for file_path in eml_files:
             try:
@@ -197,8 +200,24 @@ class Command(BaseCommand):
                     self.style.WARNING(f"Erreur sur {file_path}: {e}")
                 )
 
+        messages_with_reply_header = Message.objects.exclude(
+            in_reply_to_header__isnull=True
+        ).exclude(
+            in_reply_to_header=""
+        )
+
+        for message in messages_with_reply_header:
+            parent = Message.objects.filter(
+                message_id_header=message.in_reply_to_header
+            ).first()
+
+            if parent and message.parent_message_id != parent.id:
+                message.parent_message = parent
+                message.save(update_fields=["parent_message"])
+                linked_threads += 1
+
         self.stdout.write(
             self.style.SUCCESS(
-                f"Import terminé. Importés: {imported} | Ignorés/erreurs: {skipped}"
+                f"Import terminé. Importés: {imported} | Ignorés/erreurs: {skipped} | Threads liés: {linked_threads}"
             )
         )

@@ -11,7 +11,27 @@
         }
 
         h1 {
+            margin-bottom: 1rem;
+        }
+
+        form {
             margin-bottom: 1.5rem;
+            background: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        input[type="text"] {
+            width: 320px;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.55rem 0.9rem;
+            font-size: 1rem;
+            cursor: pointer;
         }
 
         .message {
@@ -28,6 +48,15 @@
             margin-bottom: 0.5rem;
         }
 
+        .subject a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .subject a:hover {
+            text-decoration: underline;
+        }
+
         .meta {
             color: #666;
             font-size: 0.95rem;
@@ -42,6 +71,20 @@
 </head>
 <body>
     <h1>Liste des messages</h1>
+
+    <form method="get">
+        <input
+            type="text"
+            name="q"
+            value="{{ query }}"
+            placeholder="Rechercher par sujet, contenu ou expéditeur"
+        >
+        <button type="submit">Rechercher</button>
+    </form>
+
+    {% if query %}
+        <p>Résultats pour : <strong>{{ query }}</strong></p>
+    {% endif %}
 
     <p>{{ messages|length }} message(s) affiché(s)</p>
 
