@@ -3,25 +3,35 @@
 {% block title %}Messages - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Messages</h2>
-    <p class="muted">Recherche full-text PostgreSQL avec filtres par expéditeur et dates.</p>
+<section class="page-header">
+    <span class="page-eyebrow">Recherche</span>
+    <h2 class="page-title">Explorer les messages</h2>
+    <p class="page-subtitle">
+        Recherche full-text PostgreSQL sur les sujets et contenus,
+        avec filtres par expéditeur et intervalle de dates.
+    </p>
+</section>
+
+<section class="section-card">
+    <h3 class="section-title">Filtres de recherche</h3>
+    <p class="section-subtitle">
+        Combine une recherche textuelle avec des filtres ciblés pour affiner l’exploration du corpus.
+    </p>
 
     <form method="get" class="filter-form">
-        <div>
-            <label for="q">Recherche</label><br>
+        <div class="field-group">
+            <label for="q">Recherche</label>
             <input
                 id="q"
                 type="text"
                 name="q"
                 value="{{ q }}"
-                placeholder="Sujet, contenu, expéditeur"
-                style="width: 260px;"
+                placeholder="Sujet, contenu"
             >
         </div>
 
-        <div>
-            <label for="sender">Expéditeur</label><br>
+        <div class="field-group">
+            <label for="sender">Expéditeur</label>
             <input
                 id="sender"
                 type="text"
@@ -29,7 +39,6 @@
                 list="sender-emails"
                 value="{{ sender }}"
                 placeholder="Tape un email"
-                style="width: 260px;"
             >
             <datalist id="sender-emails">
                 {% for sender_obj in senders %}
@@ -38,77 +47,93 @@
             </datalist>
         </div>
 
-        <div>
-            <label for="date_from">Date min</label><br>
+        <div class="field-group">
+            <label for="date_from">Date min</label>
             <input id="date_from" type="date" name="date_from" value="{{ date_from }}">
         </div>
 
-        <div>
-            <label for="date_to">Date max</label><br>
+        <div class="field-group">
+            <label for="date_to">Date max</label>
             <input id="date_to" type="date" name="date_to" value="{{ date_to }}">
         </div>
 
-        <div>
-            <button class="btn" type="submit">Filtrer</button>
+        <div class="actions-row" style="grid-column: 1 / -1; margin-top: 4px;">
+            <button class="btn btn-primary" type="submit">Appliquer les filtres</button>
             <a class="btn btn-secondary" href="{% url 'message_list' %}">Réinitialiser</a>
         </div>
     </form>
-</div>
+</section>
 
-<div class="card">
-    {% if q or sender or date_from or date_to %}
-        <p>
-            <strong>{{ result_count }}</strong> message{{ result_count|pluralize }} trouvé{{ result_count|pluralize }}
-            avec les filtres actuels.
-        </p>
-    {% else %}
-        <p><strong>{{ result_count }}</strong> message{{ result_count|pluralize }} au total.</p>
-    {% endif %}
-</div>
+<section class="grid grid-3">
+    <article class="soft-card">
+        <span class="meta-label">Résultats</span>
+        <div class="meta-value">{{ result_count }}</div>
+    </article>
+
+    <article class="soft-card">
+        <span class="meta-label">Recherche active</span>
+        <div class="meta-value">
+            {% if q %}{{ q }}{% else %}-{% endif %}
+        </div>
+    </article>
+
+    <article class="soft-card">
+        <span class="meta-label">Expéditeur filtré</span>
+        <div class="meta-value">
+            {% if sender %}{{ sender }}{% else %}-{% endif %}
+        </div>
+    </article>
+</section>
 
 {% if messages %}
     {% for message in messages %}
-        <div class="card message-card">
-            <h3>
-                <a class="title-link" href="{% url 'message_detail' message.id %}">
-                    {{ message.subject|default:"(Sans objet)" }}
-                </a>
-            </h3>
+        <article class="section-card message-card">
+            <div style="display: flex; justify-content: space-between; gap: 16px; align-items: start; flex-wrap: wrap;">
+                <div style="flex: 1 1 680px;">
+                    <h3>
+                        <a class="title-link" href="{% url 'message_detail' message.id %}">
+                            {{ message.subject|default:"(Sans objet)" }}
+                        </a>
+                    </h3>
 
-            <p class="muted">
-                <strong>Expéditeur :</strong>
-                {% if message.sender %}
-                    {{ message.sender }}
-                {% else %}
-                    Inconnu
-                {% endif %}
-                &nbsp; | &nbsp;
-                <strong>Date :</strong>
-                {% if message.sent_at %}
-                    {{ message.sent_at|date:"d/m/Y H:i" }}
-                {% else %}
-                    Non renseignée
-                {% endif %}
-            </p>
+                    <div class="message-meta">
+                        <span><strong>Expéditeur :</strong>
+                            {% if message.sender %}
+                                {{ message.sender }}
+                            {% else %}
+                                Inconnu
+                            {% endif %}
+                        </span>
+                        <span><strong>Date :</strong>
+                            {% if message.sent_at %}
+                                {{ message.sent_at|date:"d/m/Y H:i" }}
+                            {% else %}
+                                Non renseignée
+                            {% endif %}
+                        </span>
+                        <span><strong>ID :</strong> {{ message.id }}</span>
+                    </div>
 
-            <p>
-                {% if message.body_clean %}
-                    {{ message.body_clean|truncatechars:240 }}
-                {% elif message.body_text %}
-                    {{ message.body_text|truncatechars:240 }}
-                {% else %}
-                    <em>Aucun contenu</em>
-                {% endif %}
-            </p>
+                    <p class="message-excerpt">
+                        {% if message.body_clean %}
+                            {{ message.body_clean|truncatechars:280 }}
+                        {% elif message.body_text %}
+                            {{ message.body_text|truncatechars:280 }}
+                        {% else %}
+                            <em>Aucun contenu</em>
+                        {% endif %}
+                    </p>
+                </div>
 
-            <p>
-                <a class="btn" href="{% url 'message_detail' message.id %}">Voir le détail</a>
-            </p>
-        </div>
+                <div style="flex: 0 0 auto;">
+                    <a class="btn btn-secondary" href="{% url 'message_detail' message.id %}">Voir le détail</a>
+                </div>
+            </div>
+        </article>
     {% endfor %}
 {% else %}
-    <div class="card">
-        <p>Aucun message trouvé.</p>
-    </div>
+    <section class="section-card">
+        <div class="empty-state">Aucun message trouvé avec les filtres actuels.</div>
+    </section>
 {% endif %}
 {% endblock %}

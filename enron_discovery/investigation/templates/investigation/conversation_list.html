@@ -3,42 +3,52 @@
 {% block title %}Conversations - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Conversations probables</h2>
-    <p class="muted">
-        Regroupement des messages par sujet normalisé (suppression de Re:, Fw:, Fwd:), avec uniquement les sujets présents plusieurs fois.
+<section class="page-header" style="background: linear-gradient(135deg, rgba(31, 111, 237, 0.9) 0%, rgba(78, 151, 255, 0.82) 50%, rgba(147, 209, 255, 0.72) 100%);">
+    <span class="page-eyebrow">Exploration chronologique</span>
+    <h2 class="page-title">Conversations probables</h2>
+    <p class="page-subtitle">
+        Regroupement des messages par sujet normalisé
+        (suppression de Re:, Fw:, Fwd:) avec uniquement les sujets présents plusieurs fois.
     </p>
-    <p>
-        <strong>{{ conversation_count }}</strong> conversation{{ conversation_count|pluralize }} trouvée{{ conversation_count|pluralize }}.
-    </p>
-</div>
 
-<div class="card">
+    <div class="actions-row">
+        <span class="badge">{{ conversation_count }} conversation{{ conversation_count|pluralize }} trouvée{{ conversation_count|pluralize }}</span>
+    </div>
+</section>
+
+<section class="section-card" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.88) 0%, rgba(163, 196, 74, 0.78) 48%, rgba(255, 176, 59, 0.74) 100%);">
+    <h3 class="section-title">Liste des sujets regroupés</h3>
+    <p class="section-subtitle">
+        Vue synthétique des conversations les plus répétées dans le corpus.
+    </p>
+
     {% if conversations %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Sujet normalisé</th>
-                    <th>Nombre de messages</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for conversation in conversations %}
+        <div class="table-wrap" style="background: rgba(20, 44, 96, 0.28);">
+            <table>
+                <thead>
                     <tr>
-                        <td>{{ conversation.subject }}</td>
-                        <td>{{ conversation.count }}</td>
-                        <td>
-                            <a class="btn" href="{% url 'conversation_detail' %}?subject={{ conversation.subject|urlencode }}">
-                                Voir la conversation
-                            </a>
-                        </td>
+                        <th>Sujet normalisé</th>
+                        <th>Nombre de messages</th>
+                        <th>Action</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for conversation in conversations %}
+                        <tr>
+                            <td>{{ conversation.subject }}</td>
+                            <td>{{ conversation.count }}</td>
+                            <td>
+                                <a class="btn btn-secondary" href="{% url 'conversation_detail' %}?subject={{ conversation.subject|urlencode }}">
+                                    Voir la conversation
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% else %}
-        <p>Aucune conversation probable trouvée.</p>
+        <div class="empty-state">Aucune conversation probable trouvée.</div>
     {% endif %}
-</div>
+</section>
 {% endblock %}

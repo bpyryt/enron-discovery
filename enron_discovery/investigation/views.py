@@ -2,7 +2,7 @@ import re
 from collections import Counter
 
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
-from django.db.models import Count
+from django.db.models import Count, Q
 from django.db.models.functions import TruncMonth
 from django.shortcuts import get_object_or_404, render
 
@@ -172,15 +172,29 @@ def dashboard(request):
     total_messages = Message.objects.count()
     total_senders = Employee.objects.count()
 
-    messages_with_date = Message.objects.exclude(sent_at__isnull=True)
+    messages_with_date_qs = Message.objects.exclude(sent_at__isnull=True)
+    messages_with_date_count = messages_with_date_qs.count()
+    messages_without_date_count = total_messages - messages_with_date_count
+
+    messages_with_subject_count = Message.objects.exclude(subject__isnull=True).exclude(subject="").count()
+    messages_without_subject_count = total_messages - messages_with_subject_count
+
+    messages_with_sender_count = Message.objects.exclude(sender__isnull=True).count()
+    messages_without_sender_count = total_messages - messages_with_sender_count
+
+    messages_with_in_reply_to_count = Message.objects.exclude(in_reply_to_header__isnull=True).exclude(in_reply_to_header="").count()
+    messages_without_in_reply_to_count = total_messages - messages_with_in_reply_to_count
 
     messages_by_month = (
-        messages_with_date
+        messages_with_date_qs
         .annotate(month=TruncMonth("sent_at"))
         .values("month")
         .annotate(total=Count("id"))
         .order_by("month")
     )
+
+    recent_messages_by_month = list(messages_by_month)[-6:]
+    recent_messages_by_month.reverse()
 
     top_senders = (
         Employee.objects
@@ -189,10 +203,31 @@ def dashboard(request):
         .order_by("-message_count", "email")[:10]
     )
 
+    messages_for_conversations = Message.objects.exclude(subject__isnull=True).exclude(subject="")
+    normalized_subjects = []
+
+    for message in messages_for_conversations:
+        normalized = normalize_subject(message.subject)
+        if normalized:
+            normalized_subjects.append(normalized)
+
+    counts = Counter(normalized_subjects)
+    conversation_count = sum(1 for count in counts.values() if count > 1)
+
     context = {
         "total_messages": total_messages,
         "total_senders": total_senders,
+        "messages_with_date_count": messages_with_date_count,
+        "messages_without_date_count": messages_without_date_count,
+        "messages_with_subject_count": messages_with_subject_count,
+        "messages_without_subject_count": messages_without_subject_count,
+        "messages_with_sender_count": messages_with_sender_count,
+        "messages_without_sender_count": messages_without_sender_count,
+        "messages_with_in_reply_to_count": messages_with_in_reply_to_count,
+        "messages_without_in_reply_to_count": messages_without_in_reply_to_count,
         "messages_by_month": messages_by_month,
+        "recent_messages_by_month": recent_messages_by_month,
         "top_senders": top_senders,
+        "conversation_count": conversation_count,
     }
     return render(request, "investigation/dashboard.html", context)

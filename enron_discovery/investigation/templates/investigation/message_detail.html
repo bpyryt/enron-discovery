@@ -3,114 +3,213 @@
 {% block title %}Détail du message - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card">
-    <p>
+<section class="page-header">
+    <span class="page-eyebrow">Message</span>
+    <h2 class="page-title">{{ message.subject|default:"(Sans objet)" }}</h2>
+    <p class="page-subtitle">
+        Consultation détaillée d’un email importé, avec métadonnées,
+        destinataires, contenu brut et rattachement à une conversation probable.
+    </p>
+
+    <div class="actions-row">
         <a class="btn btn-secondary" href="{% url 'message_list' %}">← Retour à la liste</a>
+        {% if normalized_subject %}
+            <a class="btn btn-ghost" href="{% url 'conversation_detail' %}?subject={{ normalized_subject|urlencode }}">
+                Voir la conversation probable
+            </a>
+        {% endif %}
+    </div>
+</section>
+
+<section class="grid grid-2">
+    <article class="section-card">
+        <h3 class="section-title">Résumé</h3>
+        <div class="meta-grid">
+            <div class="meta-item">
+                <span class="meta-label">ID interne</span>
+                <div class="meta-value">{{ message.id }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Date</span>
+                <div class="meta-value">
+                    {% if message.sent_at %}
+                        {{ message.sent_at|date:"d/m/Y H:i" }}
+                    {% else %}
+                        Non renseignée
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Expéditeur</span>
+                <div class="meta-value">
+                    {% if message.sender %}
+                        {{ message.sender }}
+                    {% else %}
+                        Inconnu
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Sujet normalisé</span>
+                <div class="meta-value">
+                    {% if normalized_subject %}
+                        {{ normalized_subject }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="section-card green-panel">
+        <h3 class="section-title">Métadonnées techniques</h3>
+        <div class="meta-grid">
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Message-ID</span>
+                <div class="meta-value">{{ message.message_id_header|default:"-" }}</div>
+            </div>
+
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">In-Reply-To</span>
+                <div class="meta-value">{{ message.in_reply_to_header|default:"-" }}</div>
+            </div>
+
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Chemin brut</span>
+                <div class="meta-value">{{ message.raw_path|default:"-" }}</div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="section-card">
+    <h3 class="section-title">Destinataires</h3>
+    <p class="section-subtitle">
+        Liste des destinataires enregistrés pour ce message.
     </p>
 
-    <h2>{{ message.subject|default:"(Sans objet)" }}</h2>
+    {% if message.recipients.all %}
+        <div class="table-wrap">
+            <table class="compact-table">
+                <thead>
+                    <tr>
+                        <th>Destinataire</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for recipient in message.recipients.all %}
+                        <tr>
+                            <td>
+                                {% if recipient.employee %}
+                                    {{ recipient.employee }}
+                                {% else %}
+                                    {{ recipient }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if recipient.recipient_type %}
+                                    {{ recipient.recipient_type|upper }}
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="empty-state">Aucun destinataire enregistré pour ce message.</div>
+    {% endif %}
+</section>
 
-    <p class="muted">
-        <strong>ID :</strong> {{ message.id }}<br>
-        <strong>Expéditeur :</strong>
-        {% if message.sender %}
-            {{ message.sender }}
-        {% else %}
-            Inconnu
-        {% endif %}
-        <br>
-        <strong>Date :</strong>
-        {% if message.sent_at %}
-            {{ message.sent_at|date:"d/m/Y H:i" }}
-        {% else %}
-            Non renseignée
-        {% endif %}
-    </p>
-</div>
-
-<div class="card">
-    <h3>Métadonnées</h3>
-    <p><strong>Message-ID :</strong> {{ message.message_id_header|default:"-" }}</p>
-    <p><strong>In-Reply-To :</strong> {{ message.in_reply_to_header|default:"-" }}</p>
-    <p><strong>Chemin brut :</strong> {{ message.raw_path|default:"-" }}</p>
-    <p><strong>Sujet normalisé :</strong> {{ normalized_subject|default:"-" }}</p>
-</div>
-
-<div class="card">
-    <h3>Destinataires</h3>
-    <ul>
-        {% for recipient in message.recipients.all %}
-            <li>{{ recipient }}</li>
-        {% empty %}
-            <li>Aucun destinataire</li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div class="card">
-    <h3>Corps du message</h3>
+<section class="section-card">
+    <h3 class="section-title">Corps du message</h3>
     <pre class="message-body">{% if message.body_text %}{{ message.body_text }}{% else %}Aucun contenu{% endif %}</pre>
-</div>
+</section>
 
-<div class="card">
-    <h3>Réponses associées via headers</h3>
-    <ul>
-        {% for reply in message.replies.all %}
-            <li>
-                <a href="{% url 'message_detail' reply.id %}">
-                    {{ reply.subject|default:"(Sans objet)" }}
-                </a>
-                {% if reply.sent_at %}
-                    — {{ reply.sent_at|date:"d/m/Y H:i" }}
-                {% endif %}
-            </li>
-        {% empty %}
-            <li>Aucune réponse liée via In-Reply-To.</li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div class="card">
-    <h3>Conversation probable (ordre chronologique)</h3>
-
-    {% if conversation_messages %}
-        <p class="muted">
-            Messages regroupés par sujet normalisé identique, triés par date croissante.
+<section class="grid grid-2">
+    <article class="section-card">
+        <h3 class="section-title">Réponses via headers</h3>
+        <p class="section-subtitle">
+            Messages reliés par la structure RFC disponible.
         </p>
 
-        <ul>
-            {% for conversation_message in conversation_messages %}
-                <li style="margin-bottom: 10px;">
-                    {% if conversation_message.id == message.id %}
-                        <strong>
-                            {{ conversation_message.subject|default:"(Sans objet)" }}
-                        </strong>
-                    {% else %}
-                        <a href="{% url 'message_detail' conversation_message.id %}">
-                            {{ conversation_message.subject|default:"(Sans objet)" }}
+        {% if message.replies.all %}
+            <ul class="list-clean">
+                {% for reply in message.replies.all %}
+                    <li>
+                        <a class="title-link" href="{% url 'message_detail' reply.id %}">
+                            {{ reply.subject|default:"(Sans objet)" }}
                         </a>
-                    {% endif %}
+                        <br>
+                        <span class="small-muted">
+                            {% if reply.sent_at %}
+                                {{ reply.sent_at|date:"d/m/Y H:i" }}
+                            {% else %}
+                                Date inconnue
+                            {% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="empty-state">Aucune réponse liée via In-Reply-To.</div>
+        {% endif %}
+    </article>
 
-                    <br>
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(122, 75, 230, 0.92) 0%, rgba(97, 131, 255, 0.88) 48%, rgba(112, 203, 255, 0.76) 100%);">
+        <h3 class="section-title">Conversation probable</h3>
+        <p class="section-subtitle">
+            Regroupement par sujet normalisé identique, puis ordre chronologique.
+        </p>
 
-                    <span class="muted">
-                        {% if conversation_message.sent_at %}
-                            {{ conversation_message.sent_at|date:"d/m/Y H:i" }}
-                        {% else %}
-                            Date inconnue
-                        {% endif %}
-                        —
-                        {% if conversation_message.sender %}
-                            {{ conversation_message.sender }}
-                        {% else %}
-                            Inconnu
-                        {% endif %}
-                    </span>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Aucune conversation probable trouvée.</p>
-    {% endif %}
-</div>
+        {% if conversation_messages %}
+            <div class="timeline">
+                {% for conversation_message in conversation_messages %}
+                    <div class="timeline-item">
+                        <div class="timeline-card {% if conversation_message.id == message.id %}is-active{% endif %}">
+                            <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: start;">
+                                <div>
+                                    {% if conversation_message.id == message.id %}
+                                        <strong>{{ conversation_message.subject|default:"(Sans objet)" }}</strong>
+                                    {% else %}
+                                        <a class="title-link" href="{% url 'message_detail' conversation_message.id %}">
+                                            {{ conversation_message.subject|default:"(Sans objet)" }}
+                                        </a>
+                                    {% endif %}
+                                </div>
+                                <span class="badge">
+                                    {% if conversation_message.sent_at %}
+                                        {{ conversation_message.sent_at|date:"d/m/Y H:i" }}
+                                    {% else %}
+                                        Date inconnue
+                                    {% endif %}
+                                </span>
+                            </div>
+
+                            <div class="small-muted" style="margin-top: 8px;">
+                                {% if conversation_message.sender %}
+                                    {{ conversation_message.sender }}
+                                {% else %}
+                                    Inconnu
+                                {% endif %}
+                                {% if conversation_message.id == message.id %}
+                                    — message courant
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">Aucune conversation probable trouvée.</div>
+        {% endif %}
+    </article>
+</section>
 {% endblock %}

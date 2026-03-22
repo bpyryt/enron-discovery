@@ -3,36 +3,73 @@
 {% block title %}Accueil - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card hero">
-    <h2>Bienvenue sur Enron Discovery</h2>
-    <p>
-        Application Django d'exploration d'emails Enron avec recherche full-text PostgreSQL,
-        filtres par expéditeur et dates, et dashboard statistique.
+<section class="page-header">
+    <span class="page-eyebrow">Plateforme d’exploration</span>
+    <h2 class="page-title">Bienvenue sur Enron Discovery</h2>
+    <p class="page-subtitle">
+        Application Django d’exploration d’emails Enron avec recherche full-text PostgreSQL,
+        filtres par expéditeur et période, dashboard analytique et explorateur de conversations probables.
     </p>
-    <p>
-        Utilise les liens ci-dessous pour commencer.
-    </p>
-    <p>
-        <a class="btn" href="{% url 'dashboard' %}">Voir le dashboard</a>
+
+    <div class="actions-row">
+        <a class="btn btn-primary" href="{% url 'dashboard' %}">Voir le dashboard</a>
         <a class="btn btn-secondary" href="{% url 'message_list' %}">Explorer les messages</a>
-    </p>
-</div>
-
-<div class="grid">
-    <div class="card">
-        <h3>Dashboard</h3>
-        <p class="muted">
-            Consulte les statistiques globales, le volume de mails par mois et les expéditeurs les plus actifs.
-        </p>
-        <p><a class="btn" href="{% url 'dashboard' %}">Ouvrir</a></p>
     </div>
+</section>
 
-    <div class="card">
-        <h3>Messages</h3>
-        <p class="muted">
-            Recherche les emails avec PostgreSQL full-text search et filtre par expéditeur ou plage de dates.
+<section class="grid grid-3">
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(28, 100, 242, 0.92) 0%, rgba(73, 140, 255, 0.88) 50%, rgba(130, 180, 255, 0.74) 100%);">
+        <h3 class="section-title">Dashboard</h3>
+        <p class="section-subtitle">
+            Consulte rapidement les indicateurs clés : volumétrie, qualité des données,
+            activité mensuelle et principaux expéditeurs.
         </p>
-        <p><a class="btn" href="{% url 'message_list' %}">Ouvrir</a></p>
-    </div>
-</div>
+        <a class="btn btn-secondary" href="{% url 'dashboard' %}">Ouvrir</a>
+    </article>
+
+    <article class="section-card green-panel">
+        <h3 class="section-title">Messages</h3>
+        <p class="section-subtitle">
+            Recherche les emails via PostgreSQL full-text search et affine les résultats
+            avec les filtres d’expéditeur et de dates.
+        </p>
+        <a class="btn btn-secondary" href="{% url 'message_list' %}">Ouvrir</a>
+    </article>
+
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(116, 58, 237, 0.92) 0%, rgba(167, 85, 247, 0.86) 50%, rgba(224, 176, 255, 0.72) 100%);">
+        <h3 class="section-title">Conversations</h3>
+        <p class="section-subtitle">
+            Parcours les conversations probables reconstruites à partir du sujet normalisé
+            et présentées dans l’ordre chronologique.
+        </p>
+        <a class="btn btn-secondary" href="{% url 'conversation_list' %}">Ouvrir</a>
+    </article>
+</section>
+
+<section class="grid grid-2">
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(22, 96, 235, 0.92) 0%, rgba(61, 131, 255, 0.86) 50%, rgba(116, 170, 255, 0.7) 100%);">
+        <h3 class="section-title">Ce que permet l’application</h3>
+        <ul class="list-clean small-muted">
+            <li>Explorer les messages importés et leurs métadonnées principales.</li>
+            <li>Effectuer une recherche full-text sur le sujet et le contenu.</li>
+            <li>Filtrer les résultats par expéditeur et par période.</li>
+            <li>Analyser les tendances générales depuis le dashboard.</li>
+            <li>Consulter des conversations probables par sujet normalisé.</li>
+        </ul>
+    </article>
+
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(38, 137, 110, 0.9) 0%, rgba(76, 171, 132, 0.82) 52%, rgba(199, 208, 111, 0.76) 100%);">
+        <h3 class="section-title">Note méthodologique</h3>
+        <p class="section-subtitle" style="margin-bottom: 12px;">
+            Le corpus importé exploite peu les en-têtes RFC de threading.
+        </p>
+        <div class="soft-card">
+            <p class="small-muted" style="margin: 0;">
+                Les vues de conversation s’appuient donc principalement sur une logique de
+                <strong>conversation probable</strong>, fondée sur le sujet normalisé
+                puis sur un tri chronologique. Cette approche est cohérente avec les données réellement disponibles.
+            </p>
+        </div>
+    </article>
+</section>
 {% endblock %}

@@ -3,61 +3,97 @@
 {% block title %}Détail conversation - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card">
-    <p>
+<section class="page-header" style="background: linear-gradient(135deg, rgba(30, 111, 237, 0.9) 0%, rgba(87, 147, 255, 0.82) 48%, rgba(145, 201, 255, 0.72) 100%);">
+    <span class="page-eyebrow">Conversation</span>
+    <h2 class="page-title">Conversation probable</h2>
+    <p class="page-subtitle">
+        Vue chronologique des messages rassemblés par sujet normalisé identique.
+    </p>
+
+    <div class="actions-row">
         <a class="btn btn-secondary" href="{% url 'conversation_list' %}">← Retour aux conversations</a>
-    </p>
+    </div>
+</section>
 
-    <h2>Conversation probable</h2>
+<section class="grid grid-2">
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(21, 111, 230, 0.9) 0%, rgba(73, 147, 255, 0.82) 52%, rgba(124, 190, 255, 0.68) 100%);">
+        <h3 class="section-title">Contexte</h3>
+        <div class="meta-grid">
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Sujet demandé</span>
+                <div class="meta-value">
+                    {% if requested_subject %}
+                        {{ requested_subject }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </div>
+            </div>
 
-    <p>
-        <strong>Sujet demandé :</strong>
-        {% if requested_subject %}
-            {{ requested_subject }}
-        {% else %}
-            -
-        {% endif %}
-        <br>
-        <strong>Sujet normalisé :</strong>
-        {% if normalized_subject %}
-            {{ normalized_subject }}
-        {% else %}
-            -
-        {% endif %}
-    </p>
-</div>
+            <div class="meta-item" style="grid-column: 1 / -1;">
+                <span class="meta-label">Sujet normalisé</span>
+                <div class="meta-value">
+                    {% if normalized_subject %}
+                        {{ normalized_subject }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
 
-<div class="card">
-    {% if conversation_messages %}
-        <p class="muted">
-            Messages triés par ordre chronologique croissant.
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(61, 167, 109, 0.9) 0%, rgba(142, 189, 82, 0.8) 52%, rgba(250, 181, 78, 0.72) 100%);">
+        <h3 class="section-title">Lecture</h3>
+        <p class="section-subtitle" style="margin-bottom: 12px;">
+            Les messages sont affichés du plus ancien au plus récent.
         </p>
+        <div class="soft-card">
+            <p class="small-muted" style="margin: 0;">
+                Cette vue privilégie une lecture chronologique claire, adaptée à l’exploration
+                des conversations probables dans un corpus où les headers RFC sont peu exploitables.
+            </p>
+        </div>
+    </article>
+</section>
 
-        <ul>
+<section class="section-card" style="background: linear-gradient(135deg, rgba(115, 72, 228, 0.9) 0%, rgba(79, 127, 255, 0.82) 48%, rgba(92, 186, 255, 0.7) 100%);">
+    <h3 class="section-title">Timeline des messages</h3>
+
+    {% if conversation_messages %}
+        <div class="timeline">
             {% for message in conversation_messages %}
-                <li style="margin-bottom: 14px;">
-                    <a href="{% url 'message_detail' message.id %}">
-                        {{ message.subject|default:"(Sans objet)" }}
-                    </a>
-                    <br>
-                    <span class="muted">
-                        {% if message.sent_at %}
-                            {{ message.sent_at|date:"d/m/Y H:i" }}
-                        {% else %}
-                            Date inconnue
-                        {% endif %}
-                        —
-                        {% if message.sender %}
-                            {{ message.sender }}
-                        {% else %}
-                            Inconnu
-                        {% endif %}
-                    </span>
-                </li>
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: start;">
+                            <div>
+                                <a class="title-link" href="{% url 'message_detail' message.id %}">
+                                    {{ message.subject|default:"(Sans objet)" }}
+                                </a>
+                            </div>
+
+                            <span class="badge">
+                                {% if message.sent_at %}
+                                    {{ message.sent_at|date:"d/m/Y H:i" }}
+                                {% else %}
+                                    Date inconnue
+                                {% endif %}
+                            </span>
+                        </div>
+
+                        <div class="small-muted" style="margin-top: 8px;">
+                            {% if message.sender %}
+                                {{ message.sender }}
+                            {% else %}
+                                Inconnu
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     {% else %}
-        <p>Aucun message trouvé pour cette conversation.</p>
+        <div class="empty-state">Aucun message trouvé pour cette conversation.</div>
     {% endif %}
-</div>
+</section>
 {% endblock %}

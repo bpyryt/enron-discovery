@@ -3,76 +3,233 @@
 {% block title %}Dashboard - Enron Discovery{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Dashboard</h2>
-    <p class="muted">Vue d’ensemble des statistiques principales du dataset importé.</p>
-</div>
+<section class="page-header">
+    <span class="page-eyebrow">Vue d’ensemble</span>
+    <h2 class="page-title">Dashboard analytique</h2>
+    <p class="page-subtitle">
+        Lecture rapide des principaux indicateurs du dataset importé :
+        volumétrie, qualité des données, activité temporelle et expéditeurs les plus actifs.
+    </p>
 
-<div class="grid">
-    <div class="card">
-        <h3>Total messages</h3>
-        <p style="font-size: 32px; font-weight: bold;">{{ total_messages }}</p>
+    <div class="actions-row">
+        <a class="btn btn-primary" href="{% url 'message_list' %}">Explorer les messages</a>
+        <a class="btn btn-secondary" href="{% url 'conversation_list' %}">Voir les conversations</a>
     </div>
+</section>
 
-    <div class="card">
-        <h3>Total expéditeurs</h3>
-        <p style="font-size: 32px; font-weight: bold;">{{ total_senders }}</p>
-    </div>
-</div>
+<section class="stat-grid">
+    <article class="stat-card blue">
+        <p class="stat-label">Total messages</p>
+        <p class="stat-value">{{ total_messages }}</p>
+        <p class="stat-help">Volume total importé en base.</p>
+    </article>
 
-<div class="card">
-    <h3>Volume de mails par mois</h3>
+    <article class="stat-card teal">
+        <p class="stat-label">Total expéditeurs</p>
+        <p class="stat-value">{{ total_senders }}</p>
+        <p class="stat-help">Adresses distinctes identifiées.</p>
+    </article>
+
+    <article class="stat-card orange">
+        <p class="stat-label">Messages datés</p>
+        <p class="stat-value">{{ messages_with_date_count }}</p>
+        <p class="stat-help">{{ messages_without_date_count }} sans date exploitable.</p>
+    </article>
+
+    <article class="stat-card purple">
+        <p class="stat-label">Conversations probables</p>
+        <p class="stat-value">{{ conversation_count }}</p>
+        <p class="stat-help">Groupées par sujet normalisé.</p>
+    </article>
+</section>
+
+<section class="grid grid-2">
+    <article class="section-card">
+        <h3 class="section-title">Qualité et couverture des données</h3>
+        <p class="section-subtitle">
+            Quelques repères utiles pour interpréter les vues de recherche et de conversation.
+        </p>
+
+        <div class="meta-grid">
+            <div class="meta-item">
+                <span class="meta-label">Avec sujet</span>
+                <div class="meta-value">{{ messages_with_subject_count }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Sans sujet</span>
+                <div class="meta-value">{{ messages_without_subject_count }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Avec expéditeur</span>
+                <div class="meta-value">{{ messages_with_sender_count }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Sans expéditeur</span>
+                <div class="meta-value">{{ messages_without_sender_count }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Avec In-Reply-To</span>
+                <div class="meta-value">{{ messages_with_in_reply_to_count }}</div>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">Sans In-Reply-To</span>
+                <div class="meta-value">{{ messages_without_in_reply_to_count }}</div>
+            </div>
+        </div>
+    </article>
+
+    <article class="section-card green-panel">
+        <h3 class="section-title">Accès rapides</h3>
+        <p class="section-subtitle">
+            Navigation directe vers les zones les plus utiles de l’application.
+        </p>
+
+        <div class="grid">
+            <div class="soft-card">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Recherche de messages</h4>
+                <p class="muted" style="margin-top: 0;">
+                    Recherche full-text PostgreSQL, filtres par expéditeur et période.
+                </p>
+                <a class="btn btn-secondary" href="{% url 'message_list' %}">Ouvrir</a>
+            </div>
+
+            <div class="soft-card">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Conversations probables</h4>
+                <p class="muted" style="margin-top: 0;">
+                    Parcours chronologique basé sur le sujet normalisé.
+                </p>
+                <a class="btn btn-secondary" href="{% url 'conversation_list' %}">Ouvrir</a>
+            </div>
+
+            <div class="soft-card">
+                <h4 style="margin-top: 0; margin-bottom: 8px;">Administration Django</h4>
+                <p class="muted" style="margin-top: 0;">
+                    Inspection technique des objets importés et contrôle rapide des données.
+                </p>
+                <a class="btn btn-ghost" href="/admin/">Accéder à l’admin</a>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="grid grid-2">
+    <article class="section-card">
+        <div style="display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
+            <div>
+                <h3 class="section-title" style="margin-bottom: 6px;">Activité mensuelle récente</h3>
+                <p class="section-subtitle" style="margin-bottom: 0;">
+                    Vue synthétique des derniers mois disponibles.
+                </p>
+            </div>
+            <span class="badge">Aperçu</span>
+        </div>
+
+        {% if recent_messages_by_month %}
+            <div class="table-wrap">
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Mois</th>
+                            <th>Nombre de messages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in recent_messages_by_month %}
+                            <tr>
+                                <td>
+                                    {% if row.month %}
+                                        {{ row.month|date:"m/Y" }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
+                                <td>{{ row.total }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-state">Aucune donnée mensuelle disponible.</div>
+        {% endif %}
+    </article>
+
+    <article class="section-card" style="background: linear-gradient(135deg, rgba(255, 129, 34, 0.94) 0%, rgba(255, 176, 45, 0.9) 55%, rgba(255, 211, 119, 0.84) 100%);">
+        <div style="display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;">
+            <div>
+                <h3 class="section-title" style="margin-bottom: 6px;">Top expéditeurs</h3>
+                <p class="section-subtitle" style="margin-bottom: 0; color: rgba(255,255,255,0.9);">
+                    Les profils les plus actifs dans les messages importés.
+                </p>
+            </div>
+            <span class="badge">Top 10</span>
+        </div>
+
+        {% if top_senders %}
+            <div class="table-wrap">
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Expéditeur</th>
+                            <th>Messages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sender in top_senders %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ sender.email }}</td>
+                                <td>{{ sender.message_count }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-state">Aucun expéditeur trouvé.</div>
+        {% endif %}
+    </article>
+</section>
+
+<section class="section-card">
+    <h3 class="section-title">Historique mensuel complet</h3>
+    <p class="section-subtitle">
+        Table complète pour lecture détaillée de l’activité par mois.
+    </p>
+
     {% if messages_by_month %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Mois</th>
-                    <th>Nombre de messages</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for row in messages_by_month %}
+        <div class="table-wrap">
+            <table>
+                <thead>
                     <tr>
-                        <td>
-                            {% if row.month %}
-                                {{ row.month|date:"m/Y" }}
-                            {% else %}
-                                -
-                            {% endif %}
-                        </td>
-                        <td>{{ row.total }}</td>
+                        <th>Mois</th>
+                        <th>Nombre de messages</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for row in messages_by_month %}
+                        <tr>
+                            <td>
+                                {% if row.month %}
+                                    {{ row.month|date:"m/Y" }}
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td>{{ row.total }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     {% else %}
-        <p>Aucune donnée disponible.</p>
+        <div class="empty-state">Aucune donnée disponible.</div>
     {% endif %}
-</div>
-
-<div class="card">
-    <h3>Top 10 des expéditeurs les plus actifs</h3>
-    {% if top_senders %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Rang</th>
-                    <th>Expéditeur</th>
-                    <th>Nombre de messages</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for sender in top_senders %}
-                    <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td>{{ sender.email }}</td>
-                        <td>{{ sender.message_count }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>Aucun expéditeur trouvé.</p>
-    {% endif %}
-</div>
+</section>
 {% endblock %}
